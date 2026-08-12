@@ -1808,3 +1808,7 @@ text-align: center;
 }
 
 }
+/* Make hero logo more visible */
+.hero-logo-background {
+opacity: 0.25;
+}
