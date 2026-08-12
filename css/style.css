@@ -1,0 +1,1810 @@
+/* =========================================================
+BEYOND THE SURFACE
+FINAL VERSION 1 STYLESHEET
+========================================================= */
+
+
+* {
+box-sizing: border-box;
+}
+
+
+html {
+scroll-behavior: smooth;
+}
+
+
+body {
+margin: 0;
+
+background-color: #F8F5EF;
+
+color: #2F2A25;
+
+font-family: Arial, sans-serif;
+}
+
+
+img {
+max-width: 100%;
+}
+
+
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.site-header {
+position: sticky;
+
+top: 0;
+
+z-index: 100;
+
+display: flex;
+
+justify-content: space-between;
+
+align-items: center;
+
+padding: 20px 50px;
+
+background-color: rgba(255, 253, 249, 0.97);
+
+border-bottom: 1px solid #D8C5A0;
+}
+
+
+.logo-area h1 {
+margin: 0;
+
+font-family: Georgia, serif;
+
+font-size: 30px;
+
+font-weight: 500;
+
+color: #3D342C;
+}
+
+
+.logo-area p {
+margin: 6px 0 0;
+
+font-size: 12px;
+
+letter-spacing: 1px;
+
+color: #8A7455;
+}
+
+
+.main-nav {
+display: flex;
+
+align-items: center;
+
+gap: 22px;
+}
+
+
+.main-nav a {
+text-decoration: none;
+
+color: #4A4037;
+
+font-size: 15px;
+
+transition: 0.3s;
+}
+
+
+.main-nav a:hover {
+color: #B69A68;
+}
+
+
+.main-nav .help-button {
+background-color: #B69A68;
+
+color: white;
+
+padding: 10px 18px;
+
+border-radius: 25px;
+
+font-weight: bold;
+}
+
+
+
+/* =========================================================
+BUTTONS
+========================================================= */
+
+.primary-button,
+.secondary-button {
+display: inline-block;
+
+padding: 14px 28px;
+
+border-radius: 30px;
+
+text-decoration: none;
+
+font-size: 14px;
+
+font-weight: bold;
+
+transition: 0.3s;
+}
+
+
+.primary-button {
+background-color: #B69A68;
+
+color: white;
+}
+
+
+.primary-button:hover {
+background-color: #9C8257;
+}
+
+
+.secondary-button {
+background-color: transparent;
+
+border: 1px solid #B69A68;
+
+color: #8A7455;
+}
+
+
+.secondary-button:hover {
+background-color: #B69A68;
+
+color: white;
+}
+
+
+
+/* =========================================================
+SHARED
+========================================================= */
+
+.section-heading {
+max-width: 700px;
+
+margin: 0 auto 50px;
+
+text-align: center;
+}
+
+
+.section-small {
+color: #B69A68;
+
+font-size: 12px;
+
+font-weight: bold;
+
+letter-spacing: 3px;
+
+text-transform: uppercase;
+}
+
+
+.section-heading h2 {
+margin: 12px 0 15px;
+
+font-family: Georgia, serif;
+
+font-size: 40px;
+
+font-weight: 400;
+
+color: #3D342C;
+}
+
+
+.section-heading > p:last-child {
+color: #62574D;
+
+font-size: 16px;
+
+line-height: 1.7;
+}
+
+
+
+/* =========================================================
+HERO
+========================================================= */
+
+.hero {
+position: relative;
+
+width: 100%;
+
+min-height: 700px;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+padding: 100px 30px;
+
+background-color: #F8F5EF;
+
+text-align: center;
+
+overflow: hidden;
+}
+
+
+.hero-logo-background {
+position: absolute;
+
+top: 50%;
+
+left: 50%;
+
+transform: translate(-50%, -50%);
+
+width: 620px;
+
+max-width: 80%;
+
+opacity: 0.10;
+
+pointer-events: none;
+}
+
+
+.hero-logo-background img {
+width: 100%;
+
+display: block;
+}
+
+
+.hero-content {
+position: relative;
+
+z-index: 2;
+
+width: 100%;
+
+max-width: 900px;
+
+margin: 0 auto;
+}
+
+
+.hero-small {
+color: #B69A68;
+
+font-size: 12px;
+
+font-weight: bold;
+
+letter-spacing: 4px;
+}
+
+
+.hero-scripture {
+max-width: 800px;
+
+margin: 25px auto 0;
+
+font-family: Georgia, serif;
+
+font-size: 38px;
+
+font-weight: 600;
+
+line-height: 1.45;
+
+color: #3D342C;
+}
+
+
+.scripture-reference {
+margin: 18px 0 40px;
+
+color: #B69A68;
+
+font-size: 12px;
+
+font-weight: bold;
+
+letter-spacing: 2px;
+}
+
+
+.hero h2 {
+margin: 0;
+
+font-family: Georgia, serif;
+
+font-size: 58px;
+
+font-weight: 400;
+
+color: #3D342C;
+}
+
+
+.hero-mission {
+margin: 15px 0 20px;
+
+font-family: Georgia, serif;
+
+font-size: 24px;
+
+font-style: italic;
+
+color: #8A7455;
+}
+
+
+.hero-description {
+max-width: 720px;
+
+margin: 0 auto 35px;
+
+color: #62574D;
+
+font-size: 16px;
+
+line-height: 1.8;
+}
+
+
+.hero-buttons {
+display: flex;
+
+justify-content: center;
+
+flex-wrap: wrap;
+
+gap: 15px;
+}
+
+
+
+/* =========================================================
+NEEDS
+========================================================= */
+
+.needs-section {
+padding: 100px 50px;
+
+background-color: #FFFDF9;
+}
+
+
+.needs-grid {
+max-width: 1200px;
+
+margin: 0 auto;
+
+display: grid;
+
+grid-template-columns: repeat(4, 1fr);
+
+gap: 20px;
+}
+
+
+.need-card,
+.gift-card,
+.group-card,
+.service-card {
+padding: 35px 25px;
+
+border: 1px solid #E8DED0;
+
+border-radius: 12px;
+
+text-align: center;
+
+transition: 0.3s;
+}
+
+
+.need-card {
+background-color: #F8F5EF;
+}
+
+
+.need-card:hover,
+.gift-card:hover,
+.group-card:hover,
+.service-card:hover,
+.video-card:hover,
+.gallery-card:hover {
+transform: translateY(-5px);
+
+box-shadow: 0 10px 25px rgba(61, 52, 44, 0.10);
+}
+
+
+.card-icon,
+.gift-icon,
+.group-icon,
+.service-icon {
+font-size: 32px;
+
+margin-bottom: 20px;
+}
+
+
+.need-card h3,
+.gift-card h3,
+.group-card h3,
+.service-card h3 {
+margin: 0 0 15px;
+
+font-family: Georgia, serif;
+
+font-size: 23px;
+
+font-weight: 400;
+
+color: #3D342C;
+}
+
+
+.need-card p,
+.gift-card p,
+.group-card p,
+.service-card p {
+color: #62574D;
+
+font-size: 14px;
+
+line-height: 1.7;
+}
+
+
+.need-card a,
+.group-card a,
+.service-card a,
+.video-card-content a,
+.event-content a {
+color: #9C8257;
+
+text-decoration: none;
+
+font-size: 13px;
+
+font-weight: bold;
+}
+
+
+
+/* =========================================================
+ONE COMMUNITY
+========================================================= */
+
+.community-intro-section {
+padding: 100px 50px;
+
+background-color: #F8F5EF;
+}
+
+
+.community-intro-container {
+max-width: 1100px;
+
+margin: 0 auto;
+}
+
+
+.community-intro-heading {
+max-width: 800px;
+
+margin: 0 auto 55px;
+
+text-align: center;
+}
+
+
+.community-intro-heading h2 {
+font-family: Georgia, serif;
+
+font-size: 44px;
+
+font-weight: 400;
+
+color: #3D342C;
+}
+
+
+.community-intro-text {
+color: #62574D;
+
+font-size: 16px;
+
+line-height: 1.8;
+}
+
+
+.community-highlight {
+font-family: Georgia, serif;
+
+font-size: 21px;
+
+font-style: italic;
+
+color: #8A7455;
+}
+
+
+.gift-grid {
+display: grid;
+
+grid-template-columns: repeat(4, 1fr);
+
+gap: 20px;
+}
+
+
+.gift-card {
+background-color: #FFFDF9;
+}
+
+
+
+/* =========================================================
+GROUPS
+========================================================= */
+
+.groups-section {
+padding: 100px 50px;
+
+background-color: #FFFDF9;
+}
+
+
+.groups-grid {
+max-width: 1100px;
+
+margin: 0 auto;
+
+display: grid;
+
+grid-template-columns: repeat(4, 1fr);
+
+gap: 22px;
+}
+
+
+.group-card {
+background-color: #F8F5EF;
+}
+
+
+
+/* =========================================================
+EVENTS
+========================================================= */
+
+.events-section {
+padding: 100px 50px;
+
+background-color: #F8F5EF;
+}
+
+
+.events-grid {
+max-width: 1100px;
+
+margin: 0 auto;
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 25px;
+}
+
+
+.event-card {
+display: flex;
+
+min-height: 250px;
+
+overflow: hidden;
+
+background-color: #FFFDF9;
+
+border: 1px solid #E8DED0;
+
+border-radius: 12px;
+
+transition: 0.3s;
+}
+
+
+.event-card:hover {
+transform: translateY(-5px);
+
+box-shadow: 0 10px 25px rgba(61, 52, 44, 0.10);
+}
+
+
+.event-date {
+width: 95px;
+
+flex-shrink: 0;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+background-color: #B69A68;
+
+color: white;
+}
+
+
+.event-month {
+font-size: 13px;
+
+font-weight: bold;
+
+letter-spacing: 2px;
+}
+
+
+.event-day {
+margin-top: 5px;
+
+font-family: Georgia, serif;
+
+font-size: 38px;
+}
+
+
+.event-content {
+padding: 30px 25px;
+}
+
+
+.event-type {
+color: #B69A68;
+
+font-size: 11px;
+
+font-weight: bold;
+
+letter-spacing: 1.5px;
+}
+
+
+.event-content h3 {
+font-family: Georgia, serif;
+
+font-size: 24px;
+
+font-weight: 400;
+
+color: #3D342C;
+}
+
+
+.event-details,
+.event-location {
+color: #62574D;
+
+font-size: 14px;
+}
+
+
+
+/* =========================================================
+SERVICE
+========================================================= */
+
+.service-section {
+padding: 100px 50px;
+
+background-color: #FFFDF9;
+}
+
+
+.service-grid {
+max-width: 1100px;
+
+margin: 0 auto;
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 25px;
+}
+
+
+.service-card {
+background-color: #F8F5EF;
+}
+
+
+.service-type {
+color: #B69A68 !important;
+
+font-size: 11px !important;
+
+font-weight: bold;
+
+letter-spacing: 1.5px;
+}
+
+
+
+/* =========================================================
+CAREER
+========================================================= */
+
+.career-section {
+padding: 100px 50px;
+
+background-color: #F8F5EF;
+}
+
+
+.career-container {
+max-width: 1100px;
+
+margin: 0 auto;
+
+display: grid;
+
+grid-template-columns: 1.2fr 0.8fr;
+
+gap: 70px;
+
+align-items: center;
+}
+
+
+.career-content h2,
+.prayer-content h2,
+.bible-study-content h2,
+.podcast-content h2,
+.topic-content h2 {
+margin: 10px 0 20px;
+
+font-family: Georgia, serif;
+
+font-size: 44px;
+
+font-weight: 400;
+
+color: #3D342C;
+}
+
+
+.career-intro,
+.prayer-intro,
+.bible-study-intro,
+.podcast-intro {
+color: #62574D;
+
+font-size: 16px;
+
+line-height: 1.8;
+}
+
+
+.career-services {
+margin-top: 30px;
+
+display: grid;
+
+grid-template-columns: repeat(2, 1fr);
+
+gap: 14px 25px;
+}
+
+
+.career-service-item {
+color: #4A4037;
+
+font-size: 14px;
+}
+
+
+.career-service-item span {
+color: #B69A68;
+
+margin-right: 8px;
+}
+
+
+.career-buttons,
+.bible-study-buttons,
+.podcast-buttons {
+display: flex;
+
+flex-wrap: wrap;
+
+gap: 15px;
+
+margin-top: 35px;
+}
+
+
+.career-profile {
+padding: 50px 40px;
+
+background-color: #FFFDF9;
+
+border: 1px solid #E8DED0;
+
+border-radius: 15px;
+
+text-align: center;
+}
+
+
+.career-profile-icon {
+font-size: 38px;
+}
+
+
+.career-profile-small {
+color: #B69A68;
+
+font-size: 11px;
+
+font-weight: bold;
+
+letter-spacing: 2px;
+}
+
+
+.career-profile h3 {
+font-family: Georgia, serif;
+
+font-size: 26px;
+
+font-weight: 400;
+}
+
+
+.career-profile p {
+color: #62574D;
+
+font-size: 14px;
+
+line-height: 1.7;
+}
+
+
+
+/* =========================================================
+PRAYER
+========================================================= */
+
+.prayer-section {
+padding: 100px 50px;
+
+background-color: #FFFDF9;
+}
+
+
+.prayer-container {
+max-width: 1100px;
+
+margin: 0 auto;
+
+display: grid;
+
+grid-template-columns: 1fr 1fr;
+
+gap: 70px;
+
+align-items: center;
+}
+
+
+.prayer-scripture {
+margin: 35px 0 10px;
+
+padding-left: 25px;
+
+border-left: 3px solid #B69A68;
+
+font-family: Georgia, serif;
+
+font-size: 22px;
+
+line-height: 1.6;
+}
+
+
+.prayer-reference {
+color: #B69A68;
+
+font-size: 11px;
+
+font-weight: bold;
+
+letter-spacing: 2px;
+}
+
+
+.prayer-form-card,
+.topic-form-card {
+padding: 40px;
+
+background-color: #F8F5EF;
+
+border: 1px solid #E8DED0;
+
+border-radius: 15px;
+}
+
+
+.prayer-form-small {
+color: #B69A68;
+
+font-size: 11px;
+
+font-weight: bold;
+
+letter-spacing: 2px;
+}
+
+
+.prayer-form-card h3 {
+font-family: Georgia, serif;
+
+font-size: 28px;
+
+font-weight: 400;
+}
+
+
+.prayer-form,
+.topic-form {
+display: flex;
+
+flex-direction: column;
+
+gap: 10px;
+}
+
+
+.prayer-form label,
+.topic-form label {
+margin-top: 10px;
+
+font-size: 13px;
+
+font-weight: bold;
+}
+
+
+.prayer-form input,
+.prayer-form textarea,
+.prayer-form select,
+.topic-form input,
+.topic-form textarea,
+.topic-form select {
+width: 100%;
+
+padding: 13px 14px;
+
+border: 1px solid #D8C5A0;
+
+border-radius: 8px;
+
+background-color: #FFFDF9;
+
+font-family: Arial, sans-serif;
+
+font-size: 14px;
+}
+
+
+.prayer-submit,
+.topic-submit {
+margin-top: 20px;
+
+border: none;
+
+cursor: pointer;
+}
+
+
+
+/* =========================================================
+BIBLE STUDY
+========================================================= */
+
+.bible-study-section {
+padding: 100px 50px;
+
+background-color: #F8F5EF;
+}
+
+
+.bible-study-container {
+max-width: 1100px;
+
+margin: 0 auto;
+
+display: grid;
+
+grid-template-columns: 1.2fr 0.8fr;
+
+gap: 70px;
+
+align-items: center;
+}
+
+
+.study-info {
+margin-top: 35px;
+
+padding-left: 25px;
+
+border-left: 3px solid #B69A68;
+}
+
+
+.study-label {
+color: #B69A68;
+
+font-size: 11px;
+
+font-weight: bold;
+
+letter-spacing: 2px;
+}
+
+
+.study-info h3 {
+font-family: Georgia, serif;
+
+font-size: 25px;
+
+font-weight: 400;
+}
+
+
+.bible-study-verse {
+padding: 60px 45px;
+
+background-color: #FFFDF9;
+
+border: 1px solid #E8DED0;
+
+border-radius: 15px;
+
+text-align: center;
+}
+
+
+.verse-symbol {
+color: #B69A68;
+
+font-size: 30px;
+}
+
+
+.verse-text {
+font-family: Georgia, serif;
+
+font-size: 25px;
+
+line-height: 1.6;
+}
+
+
+
+/* =========================================================
+PODCAST
+========================================================= */
+
+.podcast-section {
+padding: 100px 50px;
+
+background-color: #FFFDF9;
+}
+
+
+.podcast-container {
+max-width: 1100px;
+
+margin: 0 auto;
+
+display: grid;
+
+grid-template-columns: 0.8fr 1.2fr;
+
+gap: 70px;
+
+align-items: center;
+}
+
+
+.podcast-feature {
+display: flex;
+
+justify-content: center;
+}
+
+
+.podcast-artwork {
+width: 100%;
+
+max-width: 420px;
+
+aspect-ratio: 1 / 1;
+
+padding: 25px;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+background-color: #F8F5EF;
+
+border: 1px solid #D8C5A0;
+
+border-radius: 20px;
+}
+
+
+.podcast-artwork-inner {
+width: 100%;
+
+height: 100%;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+border: 1px solid #E8DED0;
+
+border-radius: 15px;
+
+text-align: center;
+}
+
+
+.podcast-small {
+color: #B69A68;
+
+font-size: 12px;
+
+font-weight: bold;
+
+letter-spacing: 4px;
+}
+
+
+.podcast-artwork h2 {
+margin: 0;
+
+font-family: Georgia, serif;
+
+font-size: 55px;
+
+font-weight: 400;
+}
+
+
+.featured-episode {
+margin-top: 35px;
+
+padding: 30px;
+
+background-color: #F8F5EF;
+
+border: 1px solid #E8DED0;
+
+border-radius: 12px;
+}
+
+
+.episode-label {
+color: #B69A68;
+
+font-size: 11px;
+
+font-weight: bold;
+
+letter-spacing: 2px;
+}
+
+
+
+/* =========================================================
+VIDEO BLOGS
+========================================================= */
+
+.video-section {
+padding: 100px 50px;
+
+background-color: #F8F5EF;
+}
+
+
+.video-grid {
+max-width: 1100px;
+
+margin: 0 auto;
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 25px;
+}
+
+
+.video-card {
+overflow: hidden;
+
+background-color: #FFFDF9;
+
+border: 1px solid #E8DED0;
+
+border-radius: 14px;
+
+transition: 0.3s;
+}
+
+
+.video-placeholder {
+height: 180px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+background-color: #EDE5D8;
+
+color: #B69A68;
+
+font-size: 44px;
+}
+
+
+.video-card-content {
+padding: 28px;
+}
+
+
+.video-type {
+color: #B69A68;
+
+font-size: 11px;
+
+font-weight: bold;
+
+letter-spacing: 1.5px;
+}
+
+
+.video-card-content h3 {
+font-family: Georgia, serif;
+
+font-size: 24px;
+
+font-weight: 400;
+}
+
+
+
+/* =========================================================
+TOPIC FORM
+========================================================= */
+
+.topic-section {
+padding: 100px 50px;
+
+background-color: #FFFDF9;
+}
+
+
+.topic-container {
+max-width: 1000px;
+
+margin: 0 auto;
+
+display: grid;
+
+grid-template-columns: 0.9fr 1.1fr;
+
+gap: 70px;
+
+align-items: center;
+}
+
+
+.topic-content p {
+color: #62574D;
+
+font-size: 16px;
+
+line-height: 1.8;
+}
+
+
+.topic-highlight {
+font-family: Georgia, serif;
+
+font-size: 21px !important;
+
+font-style: italic;
+
+color: #8A7455 !important;
+}
+
+
+
+/* =========================================================
+GALLERY
+========================================================= */
+
+.gallery-section {
+padding: 100px 50px;
+
+background-color: #F8F5EF;
+}
+
+
+.gallery-grid {
+max-width: 1100px;
+
+margin: 0 auto;
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 25px;
+}
+
+
+.gallery-card {
+overflow: hidden;
+
+background-color: #FFFDF9;
+
+border: 1px solid #E8DED0;
+
+border-radius: 14px;
+
+transition: 0.3s;
+}
+
+
+.gallery-placeholder {
+height: 230px;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+background-color: #EDE5D8;
+
+color: #B69A68;
+
+font-size: 12px;
+
+font-weight: bold;
+
+letter-spacing: 3px;
+}
+
+
+.gallery-card-content {
+padding: 25px;
+
+text-align: center;
+}
+
+
+.gallery-card-content h3 {
+font-family: Georgia, serif;
+
+font-size: 23px;
+
+font-weight: 400;
+}
+
+
+
+/* =========================================================
+SHOP
+========================================================= */
+
+.shop-section {
+padding: 100px 50px;
+
+background-color: #FFFDF9;
+
+text-align: center;
+}
+
+
+.shop-container {
+max-width: 900px;
+
+margin: 0 auto;
+}
+
+
+.shop-container h2 {
+font-family: Georgia, serif;
+
+font-size: 42px;
+
+font-weight: 400;
+}
+
+
+.shop-container > p {
+color: #62574D;
+
+font-size: 16px;
+
+line-height: 1.8;
+}
+
+
+.shop-items {
+margin-top: 40px;
+
+display: grid;
+
+grid-template-columns: repeat(4, 1fr);
+
+gap: 20px;
+}
+
+
+.shop-placeholder {
+padding: 35px 20px;
+
+background-color: #F8F5EF;
+
+border: 1px solid #E8DED0;
+
+border-radius: 12px;
+
+font-family: Georgia, serif;
+
+color: #8A7455;
+}
+
+
+
+/* =========================================================
+ABOUT
+========================================================= */
+
+.about-section {
+padding: 100px 50px;
+
+background-color: #F8F5EF;
+
+text-align: center;
+}
+
+
+.about-container {
+max-width: 850px;
+
+margin: 0 auto;
+}
+
+
+.about-container h2 {
+font-family: Georgia, serif;
+
+font-size: 42px;
+
+font-weight: 400;
+}
+
+
+.about-container p {
+color: #62574D;
+
+font-size: 16px;
+
+line-height: 1.9;
+}
+
+
+.about-highlight {
+margin-top: 30px;
+
+font-family: Georgia, serif;
+
+font-size: 22px !important;
+
+font-style: italic;
+
+color: #8A7455 !important;
+}
+
+
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+.site-footer {
+padding: 50px;
+
+background-color: #3D342C;
+
+color: #FFFDF9;
+}
+
+
+.footer-container {
+max-width: 1100px;
+
+margin: 0 auto;
+
+text-align: center;
+}
+
+
+.footer-brand h2 {
+margin: 0;
+
+font-family: Georgia, serif;
+
+font-size: 30px;
+
+font-weight: 400;
+}
+
+
+.footer-brand p {
+color: #D8C5A0;
+}
+
+
+.footer-links {
+margin: 30px 0;
+
+display: flex;
+
+justify-content: center;
+
+flex-wrap: wrap;
+
+gap: 22px;
+}
+
+
+.footer-links a {
+color: #FFFDF9;
+
+text-decoration: none;
+
+font-size: 14px;
+}
+
+
+.footer-copy {
+color: #D8C5A0;
+
+font-size: 12px;
+}
+
+
+
+/* =========================================================
+MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+.site-header {
+flex-direction: column;
+
+gap: 20px;
+
+padding: 20px;
+}
+
+
+.main-nav {
+flex-wrap: wrap;
+
+justify-content: center;
+}
+
+
+.needs-grid,
+.gift-grid,
+.groups-grid,
+.shop-items {
+grid-template-columns: repeat(2, 1fr);
+}
+
+
+.events-grid,
+.service-grid,
+.video-grid,
+.gallery-grid {
+grid-template-columns: 1fr;
+}
+
+
+.career-container,
+.prayer-container,
+.bible-study-container,
+.podcast-container,
+.topic-container {
+grid-template-columns: 1fr;
+
+gap: 45px;
+}
+
+
+.podcast-feature {
+order: 2;
+}
+
+}
+
+
+@media (max-width: 600px) {
+
+.site-header {
+position: static;
+}
+
+
+.logo-area {
+text-align: center;
+}
+
+
+.main-nav {
+gap: 12px;
+}
+
+
+.main-nav a {
+font-size: 13px;
+}
+
+
+.hero {
+min-height: auto;
+
+padding: 80px 20px;
+}
+
+
+.hero-scripture {
+font-size: 28px;
+}
+
+
+.hero h2 {
+font-size: 42px;
+}
+
+
+.hero-mission {
+font-size: 20px;
+}
+
+
+.section-heading h2,
+.community-intro-heading h2,
+.career-content h2,
+.prayer-content h2,
+.bible-study-content h2,
+.podcast-content h2,
+.topic-content h2,
+.shop-container h2,
+.about-container h2 {
+font-size: 34px;
+}
+
+
+.needs-section,
+.community-intro-section,
+.groups-section,
+.events-section,
+.service-section,
+.career-section,
+.prayer-section,
+.bible-study-section,
+.podcast-section,
+.video-section,
+.topic-section,
+.gallery-section,
+.shop-section,
+.about-section {
+padding: 75px 20px;
+}
+
+
+.needs-grid,
+.gift-grid,
+.groups-grid,
+.shop-items {
+grid-template-columns: 1fr;
+}
+
+
+.career-services {
+grid-template-columns: 1fr;
+}
+
+
+.event-card {
+flex-direction: column;
+}
+
+
+.event-date {
+width: 100%;
+
+padding: 15px;
+
+flex-direction: row;
+
+gap: 10px;
+}
+
+
+.event-day {
+margin-top: 0;
+}
+
+
+.hero-buttons,
+.career-buttons,
+.bible-study-buttons,
+.podcast-buttons {
+flex-direction: column;
+
+align-items: center;
+}
+
+
+.primary-button,
+.secondary-button {
+text-align: center;
+}
+
+}
