@@ -1808,7 +1808,27 @@ text-align: center;
 }
 
 }
-/* Make hero logo more visible */
+/* HERO LOGO FINAL ADJUSTMENT */
+
 .hero-logo-background {
-opacity: 0.25;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 850px;
+max-width: 95%;
+opacity: 0.55;
+z-index: 1;
+pointer-events: none;
+}
+
+.hero-logo-background img {
+width: 100%;
+height: auto;
+display: block;
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
 }
