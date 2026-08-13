@@ -1,24 +1,367 @@
 /* =========================================================
-   TOP MOVING PHOTO RIBBON
-   SAME STYLE AS BOTTOM RIBBON
+   BEYOND THE SURFACE
+   COMPLETE STYLE.CSS
+========================================================= */
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --cream: #faf7f1;
+    --warm-white: #fffdf9;
+    --beige: #f2ebe1;
+    --soft-beige: #eee4d7;
+    --gold: #b6975b;
+    --dark-gold: #896e3d;
+    --charcoal: #332e2b;
+    --soft-text: #6d665f;
+    --border: #dfd4c5;
+    --white: #ffffff;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+section {
+    padding: 90px 7%;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    color: var(--charcoal);
+}
+
+h2 {
+    font-size: clamp(2.1rem, 4vw, 3.5rem);
+    line-height: 1.15;
+}
+
+h3 {
+    font-size: 1.7rem;
+    line-height: 1.25;
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+p {
+    color: var(--soft-text);
+}
+
+.section-small,
+.hero-small,
+.study-label,
+.episode-label,
+.event-category,
+.story-label {
+    color: var(--dark-gold);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2.3px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.site-header {
+    width: 100%;
+    min-height: 80px;
+    padding: 15px 6%;
+
+    background: rgba(255, 253, 249, 0.97);
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-area h1 {
+    font-size: 1.55rem;
+}
+
+.logo-area p {
+    margin-top: 2px;
+    color: var(--dark-gold);
+    font-size: 0.68rem;
+    letter-spacing: 1px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 27px;
+    align-items: center;
+}
+
+.main-nav a {
+    font-size: 0.88rem;
+    color: var(--charcoal);
+    transition: color 0.25s ease;
+}
+
+.main-nav a:hover {
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.primary-button,
+.secondary-button {
+    min-height: 48px;
+    padding: 12px 24px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 3px;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.primary-button {
+    background: var(--gold);
+    color: #fff;
+    border: 1px solid var(--gold);
+}
+
+.primary-button:hover {
+    background: var(--dark-gold);
+    border-color: var(--dark-gold);
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    background: transparent;
+    color: var(--charcoal);
+    border: 1px solid var(--gold);
+}
+
+.secondary-button:hover {
+    background: var(--gold);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+    width: min(760px, 100%);
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    margin: 10px 0 18px;
+}
+
+.section-heading > p:last-child {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 790px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(250, 247, 241, 0.50),
+            rgba(250, 247, 241, 0.66)
+        );
+}
+
+.hero-logo-background {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-logo-background img {
+    width: min(760px, 84vw);
+    max-height: 760px;
+
+    object-fit: contain;
+
+    /* DARKER LOGO */
+    opacity: 0.50;
+
+    filter:
+        contrast(122%)
+        saturate(108%)
+        sepia(4%);
+}
+
+.hero-content {
+    width: min(830px, 92%);
+
+    position: relative;
+    z-index: 2;
+}
+
+.hero-small {
+    margin-bottom: 22px;
+}
+
+.hero-scripture {
+    max-width: 690px;
+    margin: 0 auto;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.4rem, 3vw, 2.15rem);
+    font-style: italic;
+    line-height: 1.55;
+
+    color: #3f3834;
+}
+
+.scripture-reference {
+    margin: 12px 0 38px;
+
+    color: var(--dark-gold);
+    font-size: 0.8rem;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.hero h2 {
+    font-size: clamp(3rem, 8vw, 6.2rem);
+    line-height: 0.95;
+
+    margin-bottom: 22px;
+}
+
+.hero-mission {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.25rem;
+    font-style: italic;
+
+    color: var(--dark-gold);
+}
+
+.hero-description {
+    max-width: 670px;
+    margin: 24px auto 0;
+}
+
+
+/* =========================================================
+   TOP PHOTO RIBBON
+   SAME STYLE AS BOTTOM
 ========================================================= */
 
 .top-ribbon-section {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
+
+    width: 100%;
+
     background: var(--warm-white);
+
     overflow: hidden;
 }
 
 .top-photo-ribbon {
     width: 100%;
+
     overflow: hidden;
+
     padding: 10px 0 30px;
 }
 
 .top-photo-track {
-    display: flex;
-    flex-direction: row;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+
+    align-items: center;
+
     width: max-content;
 
     animation: topPhotoScroll 42s linear infinite;
@@ -34,7 +377,8 @@
 
     margin-right: 16px;
 
-    flex-shrink: 0;
+    flex: 0 0 330px;
+
     overflow: hidden;
 
     background: var(--soft-beige);
@@ -61,6 +405,1061 @@
 
     to {
         transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================================================
+   THE REASON
+========================================================= */
+
+.reason-section {
+    background: var(--warm-white);
+}
+
+.reason-container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
+/*
+   FEATURED VIDEO
+   LARGE AND WIDE
+*/
+
+.reason-video-wrapper {
+    width: min(950px, 94%);
+    margin: 0 auto;
+
+    background: #1f1f1f;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 22px 50px
+        rgba(52, 47, 44, 0.13);
+
+    overflow: hidden;
+}
+
+.reason-video-wrapper iframe {
+    display: block;
+
+    width: 100%;
+    height: 700px;
+
+    border: 0;
+}
+
+.reason-caption {
+    max-width: 720px;
+
+    margin: 35px auto 0;
+
+    text-align: center;
+}
+
+.reason-caption h3 {
+    margin: 8px 0 14px;
+
+    font-size: 2.1rem;
+}
+
+.reason-new {
+    margin-top: 18px;
+
+    color: var(--dark-gold);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+}
+
+
+/* =========================================================
+   BIBLE STUDY
+========================================================= */
+
+.bible-study-section {
+    background: var(--cream);
+}
+
+.bible-study-container {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.45fr
+        0.75fr;
+
+    gap: 30px;
+}
+
+.current-lesson-card,
+.lesson-library-card {
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    padding: 44px;
+}
+
+.current-lesson-card {
+    border-top: 4px solid var(--gold);
+}
+
+.current-lesson-card h3,
+.lesson-library-card h3 {
+    margin: 10px 0 12px;
+
+    font-size: 2rem;
+}
+
+.lesson-scripture {
+    margin-bottom: 18px;
+
+    color: var(--dark-gold);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-style: italic;
+}
+
+.lesson-description {
+    max-width: 650px;
+}
+
+.study-details {
+    margin: 28px 0;
+
+    padding: 18px 0;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+.study-details p {
+    margin: 3px 0;
+}
+
+.lesson-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.lesson-library-card {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.library-note {
+    margin-top: 18px;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   PODCAST
+========================================================= */
+
+.podcast-section {
+    background: var(--warm-white);
+}
+
+.podcast-container {
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        0.9fr
+        1.1fr;
+
+    gap: 65px;
+
+    align-items: center;
+}
+
+.podcast-feature {
+    display: flex;
+
+    justify-content: center;
+}
+
+.podcast-logo-cover {
+    width: min(440px, 100%);
+
+    aspect-ratio: 1 / 1;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #f8f2e9 0%,
+            #e5d7c3 100%
+        );
+
+    border: 1px solid var(--gold);
+
+    padding: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px
+        rgba(52, 47, 44, 0.12);
+}
+
+.podcast-logo-cover img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    /*
+       DARKER THAN THE HERO LOGO
+    */
+
+    opacity: 0.96;
+
+    filter:
+        contrast(135%)
+        saturate(115%)
+        sepia(2%);
+}
+
+.podcast-content h3 {
+    font-size: 2.35rem;
+
+    margin: 10px 0 20px;
+}
+
+.podcast-content p {
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   QUESTIONS
+========================================================= */
+
+.questions-section {
+    background: var(--beige);
+}
+
+.questions-container {
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 65px;
+
+    align-items: center;
+}
+
+.questions-content h2 {
+    margin: 10px 0 20px;
+}
+
+.questions-highlight {
+    margin-top: 24px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1.2rem;
+
+    font-style: italic;
+
+    color: var(--dark-gold);
+}
+
+.questions-form-card {
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    padding: 38px;
+}
+
+
+/* =========================================================
+   FORMS
+========================================================= */
+
+.topic-form,
+.prayer-form {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.topic-form label,
+.prayer-form label {
+    margin: 15px 0 7px;
+
+    color: var(--charcoal);
+
+    font-size: 0.86rem;
+
+    font-weight: 700;
+}
+
+.optional {
+    color: var(--soft-text);
+
+    font-weight: 400;
+}
+
+.topic-form input,
+.topic-form textarea,
+.prayer-form input,
+.prayer-form textarea,
+.prayer-form select {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    background: #fff;
+
+    border: 1px solid #d6ccbf;
+
+    border-radius: 2px;
+
+    color: var(--charcoal);
+
+    outline: none;
+}
+
+.topic-form input:focus,
+.topic-form textarea:focus,
+.prayer-form input:focus,
+.prayer-form textarea:focus,
+.prayer-form select:focus {
+    border-color: var(--gold);
+}
+
+.topic-submit,
+.prayer-submit {
+    margin-top: 22px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   COMMUNITY
+========================================================= */
+
+.community-section {
+    background: var(--warm-white);
+}
+
+.visual-events-grid {
+    max-width: 1160px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.visual-event-card {
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.visual-event-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(52, 47, 44, 0.10);
+}
+
+
+/* =========================================================
+   EVENT FLYERS / PICTURES
+========================================================= */
+
+.event-image {
+    width: 100%;
+
+    height: 430px;
+
+    background: var(--soft-beige);
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.event-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    background: #f7f2ea;
+
+    transition:
+        transform 0.35s ease;
+}
+
+.visual-event-card:hover .event-image img {
+    transform: scale(1.02);
+}
+
+
+/*
+   Job coach and hiking photos
+   fill their card naturally
+*/
+
+.resource-image img {
+    object-fit: cover;
+}
+
+.resource-image-link {
+    display: block;
+}
+
+
+/* =========================================================
+   EVENT TEXT
+========================================================= */
+
+.visual-event-info {
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex-grow: 1;
+}
+
+.visual-event-info h3 {
+    margin: 8px 0 12px;
+
+    font-size: 1.9rem;
+}
+
+.visual-event-info > p {
+    margin-bottom: 14px;
+}
+
+.event-theme {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-style: italic;
+
+    color: var(--dark-gold);
+
+    font-size: 1.05rem;
+}
+
+.visual-event-info .primary-button,
+.visual-event-info .secondary-button {
+    margin-top: auto;
+
+    align-self: flex-start;
+}
+
+
+/* =========================================================
+   EBONY / HEART WALK STORY
+========================================================= */
+
+.heart-story-card {
+    border-top: 4px solid #a35f58;
+}
+
+.ebony-story {
+    margin: 22px 0;
+
+    padding: 22px;
+
+    background: #f8f1ec;
+
+    border-left: 4px solid #a35f58;
+}
+
+.ebony-story h4 {
+    margin: 7px 0 10px;
+}
+
+.ebony-story p {
+    margin-bottom: 12px;
+}
+
+.story-link {
+    display: inline-block;
+
+    margin-top: 4px;
+
+    color: var(--dark-gold);
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PRAYER
+========================================================= */
+
+.prayer-section {
+    background: var(--cream);
+}
+
+.prayer-container {
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.prayer-content h2 {
+    margin: 10px 0 20px;
+}
+
+.prayer-intro {
+    max-width: 520px;
+}
+
+.prayer-scripture {
+    margin-top: 35px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-style: italic;
+
+    font-size: 1.45rem;
+
+    line-height: 1.6;
+
+    color: #453e39;
+}
+
+.prayer-reference {
+    margin-top: 10px;
+
+    color: var(--dark-gold);
+
+    font-size: 0.78rem;
+
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.prayer-form-card {
+    padding: 38px;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-top: 4px solid var(--gold);
+}
+
+.contact-checkbox {
+    display: flex !important;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 18px !important;
+
+    font-weight: 400 !important;
+}
+
+.contact-checkbox input {
+    width: auto;
+}
+
+
+/* =========================================================
+   BOTTOM MOVING PHOTO RIBBON
+========================================================= */
+
+.memories-section {
+    padding-left: 0;
+
+    padding-right: 0;
+
+    background: var(--warm-white);
+
+    overflow: hidden;
+}
+
+.memories-section .section-heading {
+    padding-left: 7%;
+
+    padding-right: 7%;
+}
+
+.photo-ribbon {
+    width: 100%;
+
+    overflow: hidden;
+
+    padding: 10px 0 30px;
+}
+
+.photo-track {
+    display: flex !important;
+
+    flex-direction: row !important;
+
+    flex-wrap: nowrap !important;
+
+    width: max-content;
+
+    animation:
+        photoScroll 42s linear infinite;
+}
+
+.photo-ribbon:hover .photo-track {
+    animation-play-state: paused;
+}
+
+.ribbon-photo {
+    width: 330px;
+
+    height: 230px;
+
+    margin-right: 16px;
+
+    flex: 0 0 330px;
+
+    overflow: hidden;
+
+    background: var(--soft-beige);
+}
+
+.ribbon-photo img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.35s ease;
+}
+
+.ribbon-photo:hover img {
+    transform: scale(1.04);
+}
+
+@keyframes photoScroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    padding: 55px 7% 35px;
+
+    background: #302c29;
+
+    color: #fff;
+}
+
+.footer-container {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.footer-brand h2 {
+    color: #fff;
+
+    font-size: 2rem;
+}
+
+.footer-brand p {
+    margin-top: 7px;
+
+    color: #d8cbb8;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-style: italic;
+}
+
+.footer-links {
+    margin: 30px 0 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #eee7dd;
+
+    font-size: 0.85rem;
+}
+
+.footer-links a:hover {
+    color: #d4b87a;
+}
+
+.footer-copy {
+    padding-top: 22px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    color: #a99f94;
+
+    font-size: 0.78rem;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .visual-events-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    section {
+        padding: 75px 6%;
+    }
+
+
+    /* HEADER */
+
+    .site-header {
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding-top: 14px;
+
+        padding-bottom: 14px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px 20px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 720px;
+    }
+
+
+    /* MAIN GRIDS */
+
+    .bible-study-container,
+    .podcast-container,
+    .questions-container,
+    .prayer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .podcast-container {
+        gap: 40px;
+    }
+
+    .podcast-content {
+        text-align: center;
+    }
+
+
+    /* REASON */
+
+    .reason-video-wrapper {
+        width: 96%;
+    }
+
+    .reason-video-wrapper iframe {
+        height: 650px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+    section {
+        padding: 65px 22px;
+    }
+
+
+    /* HEADER */
+
+    .site-header {
+        position: relative;
+    }
+
+    .logo-area {
+        text-align: center;
+    }
+
+    .logo-area p {
+        font-size: 0.62rem;
+    }
+
+    .main-nav {
+        gap: 8px 14px;
+    }
+
+    .main-nav a {
+        font-size: 0.78rem;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 700px;
+
+        padding-top: 65px;
+
+        padding-bottom: 65px;
+    }
+
+    .hero-logo-background img {
+        width: 97vw;
+
+        opacity: 0.40;
+    }
+
+    .hero h2 {
+        font-size: 3.35rem;
+    }
+
+    .hero-scripture {
+        font-size: 1.3rem;
+    }
+
+    .hero-description {
+        font-size: 0.94rem;
+    }
+
+
+    /* TOP MOVING RIBBON */
+
+    .top-ribbon-section {
+        padding: 0;
+    }
+
+    .top-ribbon-photo {
+        width: 270px;
+
+        height: 195px;
+
+        flex: 0 0 270px;
+    }
+
+
+    /* THE REASON */
+
+    .reason-video-wrapper {
+        width: 100%;
+    }
+
+    .reason-video-wrapper iframe {
+        height: 580px;
+    }
+
+    .reason-caption {
+        margin-top: 25px;
+    }
+
+
+    /* BIBLE STUDY */
+
+    .current-lesson-card,
+    .lesson-library-card,
+    .questions-form-card,
+    .prayer-form-card {
+        padding: 28px 22px;
+    }
+
+    .lesson-buttons {
+        flex-direction: column;
+    }
+
+    .lesson-buttons a {
+        width: 100%;
+    }
+
+
+    /* PODCAST */
+
+    .podcast-logo-cover {
+        width: 100%;
+
+        max-width: 360px;
+    }
+
+
+    /* COMMUNITY */
+
+    .visual-events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-image {
+        height: 470px;
+    }
+
+    .visual-event-info {
+        padding: 25px 22px;
+    }
+
+    .visual-event-info .primary-button,
+    .visual-event-info .secondary-button {
+        width: 100%;
+    }
+
+
+    /* BOTTOM RIBBON */
+
+    .ribbon-photo {
+        width: 270px;
+
+        height: 195px;
+
+        flex: 0 0 270px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .event-image {
+        height: 420px;
+    }
+
+    .hero h2 {
+        font-size: 3rem;
+    }
+
+    .reason-video-wrapper iframe {
+        height: 520px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .photo-track,
+    .top-photo-track {
+        animation: none;
     }
 
 }
