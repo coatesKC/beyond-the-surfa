@@ -1,94 +1,90 @@
 /* =========================================================
-BEYOND THE SURFACE
-MAIN STYLESHEET
+   BEYOND THE SURFACE
+   MAIN STYLESHEET
 ========================================================= */
 
 
 /* =========================================================
-RESET + GLOBAL
+   RESET
 ========================================================= */
 
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --cream: #faf7f1;
+    --warm-white: #fffdf9;
+    --beige: #f2ebe1;
+    --soft-beige: #eee4d7;
+    --gold: #b6975b;
+    --dark-gold: #896e3d;
+    --charcoal: #332e2b;
+    --soft-text: #6d665f;
+    --border: #dfd4c5;
+    --white: #ffffff;
 }
 
 body {
-font-family: Arial, Helvetica, sans-serif;
-color: #342f2c;
-background: #faf8f3;
-line-height: 1.7;
-overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: var(--charcoal);
+    line-height: 1.7;
+    overflow-x: hidden;
 }
 
 img {
-max-width: 100%;
-display: block;
+    max-width: 100%;
+    display: block;
 }
 
 a {
-text-decoration: none;
-color: inherit;
+    color: inherit;
+    text-decoration: none;
 }
 
 button,
 input,
 textarea,
 select {
-font: inherit;
+    font: inherit;
 }
 
 section {
-padding: 90px 7%;
+    padding: 90px 7%;
 }
 
 
 /* =========================================================
-COLORS / REUSABLE ELEMENTS
-========================================================= */
-
-:root {
---cream: #faf8f3;
---warm-white: #fffdf9;
---soft-beige: #f2ece2;
---gold: #b9985a;
---dark-gold: #8d713e;
---charcoal: #342f2c;
---soft-text: #6e675f;
---border: #e3d9c9;
---white: #ffffff;
-}
-
-
-/* =========================================================
-TYPOGRAPHY
+   TYPOGRAPHY
 ========================================================= */
 
 h1,
 h2,
 h3 {
-font-family: Georgia, "Times New Roman", serif;
-font-weight: 400;
-color: var(--charcoal);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    color: var(--charcoal);
 }
 
 h2 {
-font-size: clamp(2rem, 4vw, 3.3rem);
-line-height: 1.15;
+    font-size: clamp(2.1rem, 4vw, 3.5rem);
+    line-height: 1.15;
 }
 
 h3 {
-font-size: 1.6rem;
-line-height: 1.3;
+    font-size: 1.7rem;
+    line-height: 1.25;
 }
 
 p {
-color: var(--soft-text);
+    color: var(--soft-text);
 }
 
 .section-small,
@@ -98,539 +94,534 @@ color: var(--soft-text);
 .video-type,
 .event-category,
 .podcast-small {
-color: var(--dark-gold);
-font-size: 0.76rem;
-font-weight: 700;
-letter-spacing: 2.5px;
-text-transform: uppercase;
+    color: var(--dark-gold);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
 }
 
 
 /* =========================================================
-HEADER
+   HEADER
 ========================================================= */
 
 .site-header {
-width: 100%;
-min-height: 82px;
-padding: 16px 6%;
-background: rgba(255, 253, 249, 0.97);
-border-bottom: 1px solid var(--border);
+    width: 100%;
+    min-height: 80px;
+    padding: 15px 6%;
+    background: rgba(255, 253, 249, 0.97);
+    border-bottom: 1px solid var(--border);
 
-display: flex;
-align-items: center;
-justify-content: space-between;
-gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
 
-position: sticky;
-top: 0;
-z-index: 1000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo-area h1 {
-font-size: 1.55rem;
+    font-size: 1.55rem;
 }
 
 .logo-area p {
-margin-top: 2px;
-font-size: 0.7rem;
-letter-spacing: 1.5px;
-color: var(--dark-gold);
+    margin-top: 2px;
+    color: var(--dark-gold);
+    font-size: 0.68rem;
+    letter-spacing: 1px;
 }
 
 .main-nav {
-display: flex;
-align-items: center;
-gap: 28px;
+    display: flex;
+    gap: 27px;
+    align-items: center;
 }
 
 .main-nav a {
-font-size: 0.9rem;
-color: var(--charcoal);
-transition: color 0.25s ease;
+    font-size: 0.88rem;
+    color: var(--charcoal);
+    transition: color 0.25s ease;
 }
 
 .main-nav a:hover {
-color: var(--gold);
+    color: var(--gold);
 }
 
 
 /* =========================================================
-BUTTONS
+   BUTTONS
 ========================================================= */
 
 .primary-button,
 .secondary-button {
-display: inline-flex;
-align-items: center;
-justify-content: center;
+    min-height: 48px;
+    padding: 12px 24px;
 
-min-height: 48px;
-padding: 12px 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 
-border-radius: 3px;
-font-size: 0.82rem;
-font-weight: 700;
-letter-spacing: 1px;
-text-transform: uppercase;
+    border-radius: 3px;
 
-transition:
-transform 0.25s ease,
-background 0.25s ease,
-color 0.25s ease;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
 .primary-button {
-background: var(--gold);
-color: var(--white);
-border: 1px solid var(--gold);
+    background: var(--gold);
+    color: #fff;
+    border: 1px solid var(--gold);
 }
 
 .primary-button:hover {
-background: var(--dark-gold);
-border-color: var(--dark-gold);
-transform: translateY(-2px);
+    background: var(--dark-gold);
+    border-color: var(--dark-gold);
+    transform: translateY(-2px);
 }
 
 .secondary-button {
-background: transparent;
-color: var(--charcoal);
-border: 1px solid var(--gold);
+    background: transparent;
+    color: var(--charcoal);
+    border: 1px solid var(--gold);
 }
 
 .secondary-button:hover {
-background: var(--gold);
-color: var(--white);
-transform: translateY(-2px);
+    background: var(--gold);
+    color: #fff;
+    transform: translateY(-2px);
 }
 
 .text-link {
-color: var(--dark-gold);
-font-weight: 700;
+    color: var(--dark-gold);
+    font-weight: 700;
 }
 
 
 /* =========================================================
-GENERAL SECTION HEADING
+   GENERAL SECTION HEADINGS
 ========================================================= */
 
 .section-heading {
-max-width: 720px;
-margin: 0 auto 55px;
-text-align: center;
+    width: min(720px, 100%);
+    margin: 0 auto 55px;
+    text-align: center;
 }
 
 .section-heading h2 {
-margin: 10px 0 18px;
+    margin: 10px 0 18px;
 }
 
 .section-heading > p:last-child {
-max-width: 650px;
-margin: 0 auto;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 /* =========================================================
-HERO
+   HERO
 ========================================================= */
 
 .hero {
-min-height: 780px;
+    min-height: 790px;
 
-display: flex;
-align-items: center;
-justify-content: center;
+    position: relative;
+    overflow: hidden;
 
-text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-position: relative;
-overflow: hidden;
+    text-align: center;
 
-background:
-linear-gradient(
-rgba(250, 248, 243, 0.74),
-rgba(250, 248, 243, 0.88)
-);
+    background:
+        linear-gradient(
+            rgba(250, 247, 241, 0.56),
+            rgba(250, 247, 241, 0.74)
+        );
 }
 
 .hero-logo-background {
-position: absolute;
-inset: 0;
+    position: absolute;
+    inset: 0;
 
-display: flex;
-align-items: center;
-justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-z-index: 0;
-pointer-events: none;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .hero-logo-background img {
-width: min(650px, 75vw);
-max-height: 650px;
-object-fit: contain;
+    width: min(720px, 82vw);
+    max-height: 720px;
+    object-fit: contain;
 
-opacity: 0.16;
+    /* DARKER THAN BEFORE */
+    opacity: 0.42;
 
-filter:
-sepia(18%)
-saturate(80%);
+    filter:
+        contrast(118%)
+        saturate(105%)
+        sepia(5%);
 }
 
 .hero-content {
-width: min(820px, 92%);
-position: relative;
-z-index: 2;
+    width: min(830px, 92%);
+    position: relative;
+    z-index: 2;
 }
 
 .hero-small {
-margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 .hero-scripture {
-max-width: 670px;
-margin: 0 auto;
+    max-width: 690px;
+    margin: 0 auto;
 
-font-family: Georgia, "Times New Roman", serif;
-font-size: clamp(1.4rem, 3vw, 2.2rem);
-line-height: 1.55;
-font-style: italic;
-color: #4b433d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.4rem, 3vw, 2.15rem);
+    font-style: italic;
+    line-height: 1.55;
+
+    color: #3f3834;
 }
 
 .scripture-reference {
-margin: 13px 0 40px;
+    margin: 12px 0 38px;
 
-color: var(--dark-gold);
-font-size: 0.8rem;
-letter-spacing: 1.8px;
-text-transform: uppercase;
+    color: var(--dark-gold);
+    font-size: 0.8rem;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
 }
 
 .hero h2 {
-font-size: clamp(3rem, 8vw, 6.4rem);
-line-height: 0.95;
-margin-bottom: 22px;
+    font-size: clamp(3rem, 8vw, 6.2rem);
+    line-height: 0.95;
+    margin-bottom: 22px;
 }
 
 .hero-mission {
-color: var(--dark-gold);
-font-family: Georgia, "Times New Roman", serif;
-font-size: 1.25rem;
-font-style: italic;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--dark-gold);
 }
 
 .hero-description {
-max-width: 670px;
-margin: 25px auto 0;
-font-size: 1rem;
+    max-width: 670px;
+    margin: 24px auto 0;
 }
 
 .hero-buttons {
-margin-top: 35px;
+    margin-top: 34px;
 
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-gap: 14px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 
 /* =========================================================
-BIBLE STUDY
+   BIBLE STUDY
 ========================================================= */
 
 .bible-study-section {
-background: var(--warm-white);
+    background: var(--warm-white);
 }
 
 .bible-study-container {
-max-width: 1100px;
-margin: 0 auto;
+    max-width: 1100px;
+    margin: 0 auto;
 
-display: grid;
-grid-template-columns: 1.45fr 0.75fr;
-gap: 30px;
+    display: grid;
+    grid-template-columns: 1.45fr 0.75fr;
+    gap: 30px;
 }
 
 .current-lesson-card,
 .lesson-library-card {
-border: 1px solid var(--border);
-background: var(--white);
-padding: 45px;
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 44px;
 }
 
 .current-lesson-card {
-border-top: 4px solid var(--gold);
+    border-top: 4px solid var(--gold);
 }
 
 .current-lesson-card h3,
 .lesson-library-card h3 {
-margin: 12px 0 18px;
-font-size: 2rem;
+    margin: 10px 0 12px;
+    font-size: 2rem;
+}
+
+.lesson-scripture {
+    margin-bottom: 18px;
+    color: var(--dark-gold);
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
 }
 
 .lesson-description {
-max-width: 650px;
+    max-width: 650px;
 }
 
 .study-details {
-margin: 28px 0;
-padding: 18px 0;
+    margin: 28px 0;
+    padding: 18px 0;
 
-border-top: 1px solid var(--border);
-border-bottom: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
 .study-details p {
-margin: 3px 0;
+    margin: 3px 0;
 }
 
 .lesson-buttons {
-display: flex;
-flex-wrap: wrap;
-gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 .lesson-library-card {
-display: flex;
-flex-direction: column;
-justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.library-note {
+    margin-top: 18px;
+    font-style: italic;
 }
 
 .lesson-library-card .text-link {
-margin-top: 22px;
+    display: inline-block;
+    margin-top: 24px;
 }
 
 
 /* =========================================================
-BIBLE STUDY INVITATION
-========================================================= */
-
-.study-invite-section {
-padding-top: 60px;
-padding-bottom: 60px;
-background: var(--soft-beige);
-}
-
-.study-invite-container {
-max-width: 1050px;
-margin: 0 auto;
-
-display: flex;
-justify-content: space-between;
-align-items: center;
-gap: 50px;
-}
-
-.study-invite-container > div {
-max-width: 680px;
-}
-
-.study-invite-container h2 {
-margin: 8px 0 15px;
-}
-
-
-/* =========================================================
-PODCAST
+   PODCAST
 ========================================================= */
 
 .podcast-section {
-background: var(--cream);
+    background: var(--cream);
 }
 
 .podcast-container {
-max-width: 1050px;
-margin: 0 auto;
+    max-width: 1050px;
+    margin: 0 auto;
 
-display: grid;
-grid-template-columns: 0.85fr 1.15fr;
-gap: 65px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 65px;
 
-align-items: center;
+    align-items: center;
 }
 
-.podcast-artwork {
-aspect-ratio: 1 / 1;
-max-width: 430px;
-
-margin: auto;
-
-border: 1px solid var(--gold);
-padding: 20px;
-
-background:
-radial-gradient(
-circle at center,
-#fffdf9 0%,
-#f0e8dc 100%
-);
+.podcast-feature {
+    display: flex;
+    justify-content: center;
 }
 
-.podcast-artwork-inner {
-height: 100%;
+.podcast-logo-cover {
+    width: min(440px, 100%);
+    aspect-ratio: 1 / 1;
 
-border: 1px solid rgba(185, 152, 90, 0.55);
+    background:
+        radial-gradient(
+            circle at center,
+            #f8f2e9 0%,
+            #e5d7c3 100%
+        );
 
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+    border: 1px solid var(--gold);
+    padding: 25px;
 
-text-align: center;
-padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    box-shadow: 0 15px 40px rgba(52, 47, 44, 0.12);
 }
 
-.podcast-artwork h2 {
-margin: 4px 0 12px;
+.podcast-logo-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 
-font-size: clamp(3rem, 7vw, 5rem);
-font-style: italic;
-}
+    /*
+    Podcast logo is intentionally much darker
+    than hero background logo.
+    */
+    opacity: 0.88;
 
-.podcast-tagline {
-font-family: Georgia, "Times New Roman", serif;
-font-style: italic;
+    filter:
+        contrast(125%)
+        saturate(110%)
+        sepia(3%);
 }
 
 .podcast-content h3 {
-font-size: 2.3rem;
-margin: 12px 0 20px;
+    font-size: 2.35rem;
+    margin: 10px 0 20px;
+}
+
+.podcast-content > p {
+    margin-bottom: 15px;
 }
 
 .podcast-buttons {
-margin-top: 28px;
+    margin-top: 28px;
 
-display: flex;
-flex-wrap: wrap;
-gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 
 /* =========================================================
-VIDEO CLIPS
+   VIDEO CLIPS
 ========================================================= */
 
 .video-section {
-background: var(--warm-white);
+    background: var(--warm-white);
 }
 
 .video-grid {
-max-width: 1100px;
-margin: 0 auto;
+    max-width: 1100px;
+    margin: 0 auto;
 
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
 .video-card {
-background: var(--white);
-border: 1px solid var(--border);
-overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--border);
 
-transition:
-transform 0.25s ease,
-box-shadow 0.25s ease;
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .video-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 15px 35px rgba(50, 45, 40, 0.08);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(50, 45, 40, 0.08);
 }
 
 .video-placeholder {
-min-height: 200px;
+    min-height: 210px;
 
-display: flex;
-align-items: center;
-justify-content: center;
+    background: var(--beige);
 
-background: var(--soft-beige);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-color: var(--gold);
-font-size: 2rem;
+    color: var(--gold);
+    font-size: 2rem;
 }
 
 .video-card-content {
-padding: 28px;
+    padding: 28px;
 }
 
 .video-card-content h3 {
-margin: 8px 0 12px;
+    margin: 7px 0 12px;
 }
 
 .video-card-content a {
-display: inline-block;
-margin-top: 18px;
+    display: inline-block;
+    margin-top: 18px;
 
-color: var(--dark-gold);
-font-weight: 700;
+    color: var(--dark-gold);
+    font-weight: 700;
 }
 
 
 /* =========================================================
-QUESTIONS
+   QUESTIONS
 ========================================================= */
 
 .questions-section {
-background: var(--soft-beige);
+    background: var(--beige);
 }
 
 .questions-container {
-max-width: 1050px;
-margin: 0 auto;
+    max-width: 1050px;
+    margin: 0 auto;
 
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
 
-align-items: center;
+    align-items: center;
 }
 
 .questions-content h2 {
-margin: 10px 0 20px;
+    margin: 10px 0 20px;
 }
 
 .questions-highlight {
-margin-top: 25px;
+    margin-top: 24px;
 
-font-family: Georgia, "Times New Roman", serif;
-color: var(--dark-gold);
-font-style: italic;
-font-size: 1.2rem;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--dark-gold);
 }
 
 .questions-form-card {
-background: var(--white);
-border: 1px solid var(--border);
-padding: 38px;
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 38px;
 }
 
 
 /* =========================================================
-FORMS
+   FORMS
 ========================================================= */
 
 .topic-form,
 .prayer-form {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .topic-form label,
 .prayer-form label {
-margin: 15px 0 7px;
+    margin: 15px 0 7px;
 
-color: var(--charcoal);
-font-size: 0.86rem;
-font-weight: 700;
+    color: var(--charcoal);
+    font-size: 0.86rem;
+    font-weight: 700;
 }
 
 .optional {
-font-weight: 400;
-color: var(--soft-text);
+    color: var(--soft-text);
+    font-weight: 400;
 }
 
 .topic-form input,
@@ -639,17 +630,16 @@ color: var(--soft-text);
 .prayer-form input,
 .prayer-form textarea,
 .prayer-form select {
-width: 100%;
+    width: 100%;
 
-padding: 13px 14px;
+    padding: 13px 14px;
 
-background: #fff;
-border: 1px solid #d8d0c5;
-border-radius: 2px;
+    background: #fff;
+    border: 1px solid #d6ccbf;
+    border-radius: 2px;
 
-color: var(--charcoal);
-
-outline: none;
+    color: var(--charcoal);
+    outline: none;
 }
 
 .topic-form input:focus,
@@ -658,555 +648,574 @@ outline: none;
 .prayer-form input:focus,
 .prayer-form textarea:focus,
 .prayer-form select:focus {
-border-color: var(--gold);
+    border-color: var(--gold);
 }
 
 .topic-submit,
 .prayer-submit {
-margin-top: 22px;
-cursor: pointer;
+    margin-top: 22px;
+    cursor: pointer;
 }
 
 
 /* =========================================================
-COMMUNITY
+   COMMUNITY
 ========================================================= */
 
 .community-section {
-background: var(--cream);
+    background: var(--cream);
 }
 
-.community-events-grid {
-max-width: 1100px;
-margin: 0 auto;
+.visual-events-grid {
+    max-width: 1160px;
+    margin: 0 auto;
 
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
-.community-event-card {
-position: relative;
 
-background: var(--white);
-border: 1px solid var(--border);
+/* =========================================================
+   VISUAL EVENT CARDS
+========================================================= */
 
-padding: 38px;
+.visual-event-card {
+    background: #fff;
+    border: 1px solid var(--border);
 
-min-height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-.community-event-card:hover {
-box-shadow: 0 15px 35px rgba(50, 45, 40, 0.07);
+.visual-event-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(52, 47, 44, 0.10);
 }
 
-.featured-event {
-border-top: 4px solid var(--gold);
+
+/* =========================================================
+   EVENT IMAGE / FLYER
+========================================================= */
+
+.event-image {
+    width: 100%;
+    height: 430px;
+
+    background: var(--soft-beige);
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.heart-event {
-border-top: 4px solid #9c554f;
+.event-image img {
+    width: 100%;
+    height: 100%;
+
+    /*
+    contain shows the entire flyer instead of
+    cutting important information off.
+    */
+    object-fit: contain;
+
+    background: #f7f2ea;
+
+    transition: transform 0.35s ease;
 }
 
-.event-date-box {
-width: 70px;
-height: 75px;
-
-margin-bottom: 24px;
-
-border: 1px solid var(--gold);
-
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
-background: var(--warm-white);
+.visual-event-card:hover .event-image img {
+    transform: scale(1.02);
 }
 
-.event-month {
-font-size: 0.7rem;
-letter-spacing: 2px;
-color: var(--dark-gold);
-font-weight: 700;
+
+/* Photo-type cards can fill more of the frame */
+
+.resource-image img {
+    object-fit: cover;
 }
 
-.event-day {
-font-family: Georgia, "Times New Roman", serif;
-font-size: 1.8rem;
-line-height: 1;
-color: var(--charcoal);
+
+/* =========================================================
+   EVENT INFORMATION
+========================================================= */
+
+.visual-event-info {
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-.community-event-content h3 {
-margin: 8px 0 12px;
-font-size: 2rem;
+.visual-event-info h3 {
+    margin: 8px 0 12px;
+    font-size: 1.9rem;
 }
 
-.community-event-content > p {
-margin-bottom: 15px;
+.visual-event-info > p {
+    margin-bottom: 14px;
 }
 
 .event-theme {
-color: var(--dark-gold);
-font-family: Georgia, "Times New Roman", serif;
-font-size: 1.1rem;
-font-style: italic;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    color: var(--dark-gold);
+    font-size: 1.05rem;
 }
 
-.event-scripture {
-margin: 20px 0 7px;
-
-padding-left: 18px;
-
-border-left: 2px solid var(--gold);
-
-font-family: Georgia, "Times New Roman", serif;
-font-style: italic;
-color: #4f4944;
+.visual-event-info .primary-button,
+.visual-event-info .secondary-button {
+    margin-top: auto;
+    align-self: flex-start;
 }
 
-.event-reference {
-font-size: 0.8rem;
-color: var(--dark-gold);
-}
-
-.event-info {
-margin: 22px 0;
-padding: 18px;
-
-background: var(--soft-beige);
-}
-
-.event-info p {
-margin: 3px 0;
-}
-
-.event-buttons {
-margin-top: 25px;
-
-display: flex;
-flex-wrap: wrap;
-gap: 10px;
-}
-
-.community-resource-icon {
-margin-bottom: 15px;
-font-size: 2rem;
-}
-
-.resource-card {
-background: #f7f3eb;
+.resource-image-link {
+    display: block;
 }
 
 
 /* =========================================================
-EVENT FLYERS
-========================================================= */
-
-.flyer-section {
-background: var(--warm-white);
-text-align: center;
-}
-
-.heart-flyer-section {
-background: var(--soft-beige);
-}
-
-.flyer-container {
-max-width: 760px;
-margin: 0 auto;
-
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 30px;
-}
-
-.event-flyer-image {
-width: 100%;
-max-width: 700px;
-
-height: auto;
-
-object-fit: contain;
-
-border: 1px solid var(--border);
-box-shadow: 0 15px 40px rgba(52, 47, 44, 0.1);
-}
-
-
-/* =========================================================
-PRAYER
+   PRAYER
 ========================================================= */
 
 .prayer-section {
-background: var(--cream);
+    background: var(--warm-white);
 }
 
 .prayer-container {
-max-width: 1050px;
-margin: 0 auto;
+    max-width: 1050px;
+    margin: 0 auto;
 
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
 
-align-items: center;
+    align-items: center;
 }
 
 .prayer-content h2 {
-margin: 10px 0 20px;
+    margin: 10px 0 20px;
 }
 
 .prayer-intro {
-max-width: 520px;
+    max-width: 520px;
 }
 
 .prayer-scripture {
-margin-top: 35px;
+    margin-top: 35px;
 
-font-family: Georgia, "Times New Roman", serif;
-font-style: italic;
-font-size: 1.45rem;
-line-height: 1.6;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 1.45rem;
+    line-height: 1.6;
 
-color: #4b433d;
+    color: #453e39;
 }
 
 .prayer-reference {
-margin-top: 10px;
+    margin-top: 10px;
 
-color: var(--dark-gold);
-font-size: 0.8rem;
-letter-spacing: 1.4px;
-text-transform: uppercase;
+    color: var(--dark-gold);
+    font-size: 0.78rem;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
 }
 
 .prayer-form-card {
-background: var(--white);
+    padding: 38px;
 
-border: 1px solid var(--border);
-border-top: 4px solid var(--gold);
-
-padding: 38px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--gold);
 }
 
 .contact-checkbox {
-display: flex !important;
-flex-direction: row;
-align-items: center;
-gap: 10px;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 
-margin-top: 18px !important;
+    margin-top: 18px !important;
 
-font-weight: 400 !important;
+    font-weight: 400 !important;
 }
 
 .contact-checkbox input {
-width: auto;
+    width: auto;
 }
 
 
 /* =========================================================
-PHOTO RIBBON
+   SLIDING PHOTO RIBBON
 ========================================================= */
 
 .memories-section {
-padding-left: 0;
-padding-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 
-background: var(--warm-white);
-overflow: hidden;
+    background: var(--cream);
+    overflow: hidden;
 }
 
 .memories-section .section-heading {
-padding-left: 7%;
-padding-right: 7%;
+    padding-left: 7%;
+    padding-right: 7%;
 }
 
 .photo-ribbon {
-width: 100%;
-overflow: hidden;
+    width: 100%;
+    overflow: hidden;
 
-padding: 10px 0 30px;
+    padding: 10px 0 30px;
 }
 
 .photo-track {
-display: flex;
-width: max-content;
+    display: flex;
+    width: max-content;
 
-animation: photoScroll 42s linear infinite;
+    animation:
+        photoScroll 42s linear infinite;
 }
 
 .photo-ribbon:hover .photo-track {
-animation-play-state: paused;
+    animation-play-state: paused;
 }
 
 .ribbon-photo {
-width: 330px;
-height: 230px;
+    width: 330px;
+    height: 230px;
 
-margin-right: 16px;
+    margin-right: 16px;
 
-flex-shrink: 0;
+    flex-shrink: 0;
 
-overflow: hidden;
+    overflow: hidden;
 
-background: var(--soft-beige);
+    background: var(--soft-beige);
 }
 
 .ribbon-photo img {
-width: 100%;
-height: 100%;
+    width: 100%;
+    height: 100%;
 
-object-fit: cover;
+    object-fit: cover;
 
-transition: transform 0.4s ease;
+    transition: transform 0.35s ease;
 }
 
 .ribbon-photo:hover img {
-transform: scale(1.04);
+    transform: scale(1.04);
 }
 
 @keyframes photoScroll {
 
-from {
-transform: translateX(0);
-}
+    from {
+        transform: translateX(0);
+    }
 
-to {
-transform: translateX(-50%);
-}
+    to {
+        transform: translateX(-50%);
+    }
 
 }
 
 
 /* =========================================================
-FOOTER
+   FOOTER
 ========================================================= */
 
 .site-footer {
-padding: 55px 7% 35px;
+    padding: 55px 7% 35px;
 
-background: #302c29;
-color: #fff;
+    background: #302c29;
+    color: #fff;
 }
 
 .footer-container {
-max-width: 1100px;
-margin: 0 auto;
+    max-width: 1100px;
+    margin: 0 auto;
 
-text-align: center;
+    text-align: center;
 }
 
 .footer-brand h2 {
-color: #fff;
-font-size: 2rem;
+    color: #fff;
+    font-size: 2rem;
 }
 
 .footer-brand p {
-margin-top: 7px;
-color: #d8cbb8;
-font-family: Georgia, "Times New Roman", serif;
-font-style: italic;
+    margin-top: 7px;
+
+    color: #d8cbb8;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
 }
 
 .footer-links {
-margin: 30px 0 25px;
+    margin: 30px 0 25px;
 
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-gap: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 .footer-links a {
-color: #eee7dd;
-font-size: 0.85rem;
+    color: #eee7dd;
+    font-size: 0.85rem;
 }
 
 .footer-links a:hover {
-color: #d4b87a;
+    color: #d4b87a;
 }
 
 .footer-copy {
-padding-top: 22px;
+    padding-top: 22px;
 
-border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.12);
 
-color: #a99f94;
-font-size: 0.78rem;
+    color: #a99f94;
+    font-size: 0.78rem;
 }
 
 
 /* =========================================================
-TABLET
+   TABLET
 ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .visual-events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
 
 @media (max-width: 900px) {
 
-section {
-padding: 75px 6%;
-}
+    section {
+        padding: 75px 6%;
+    }
 
-.site-header {
-flex-direction: column;
-gap: 12px;
+    .site-header {
+        flex-direction: column;
+        gap: 12px;
 
-padding-top: 14px;
-padding-bottom: 14px;
-}
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
 
-.main-nav {
-gap: 18px;
-flex-wrap: wrap;
-justify-content: center;
-}
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 20px;
+    }
 
-.hero {
-min-height: 700px;
-}
+    .hero {
+        min-height: 720px;
+    }
 
-.bible-study-container,
-.podcast-container,
-.questions-container,
-.prayer-container {
-grid-template-columns: 1fr;
-}
+    .bible-study-container,
+    .podcast-container,
+    .questions-container,
+    .prayer-container {
+        grid-template-columns: 1fr;
+    }
 
-.podcast-container {
-gap: 40px;
-}
+    .podcast-container {
+        gap: 40px;
+    }
 
-.podcast-content {
-text-align: center;
-}
+    .podcast-content {
+        text-align: center;
+    }
 
-.podcast-buttons {
-justify-content: center;
-}
+    .podcast-buttons {
+        justify-content: center;
+    }
 
-.video-grid {
-grid-template-columns: 1fr 1fr;
-}
-
-.community-events-grid {
-grid-template-columns: 1fr;
-}
-
-.study-invite-container {
-flex-direction: column;
-align-items: flex-start;
-}
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 
 }
 
 
 /* =========================================================
-MOBILE
+   MOBILE
 ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
-section {
-padding: 65px 22px;
-}
+    section {
+        padding: 65px 22px;
+    }
 
-.site-header {
-position: relative;
-}
+    .site-header {
+        position: relative;
+    }
 
-.logo-area {
-text-align: center;
-}
+    .logo-area {
+        text-align: center;
+    }
 
-.main-nav {
-gap: 8px 15px;
-}
+    .logo-area p {
+        font-size: 0.62rem;
+    }
 
-.main-nav a {
-font-size: 0.78rem;
-}
+    .main-nav {
+        gap: 8px 14px;
+    }
 
-.hero {
-min-height: 680px;
-padding-top: 70px;
-padding-bottom: 70px;
-}
+    .main-nav a {
+        font-size: 0.78rem;
+    }
 
-.hero-logo-background img {
-width: 95vw;
-opacity: 0.13;
-}
 
-.hero h2 {
-font-size: 3.4rem;
-}
+    /* HERO */
 
-.hero-scripture {
-font-size: 1.35rem;
-}
+    .hero {
+        min-height: 700px;
 
-.hero-description {
-font-size: 0.94rem;
-}
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
 
-.hero-buttons,
-.lesson-buttons,
-.podcast-buttons,
-.event-buttons {
-flex-direction: column;
-}
+    .hero-logo-background img {
+        width: 97vw;
 
-.hero-buttons a,
-.lesson-buttons a,
-.podcast-buttons a,
-.event-buttons a {
-width: 100%;
-}
+        /*
+        slightly softer on a small screen so
+        scripture stays readable
+        */
+        opacity: 0.34;
+    }
 
-.current-lesson-card,
-.lesson-library-card,
-.community-event-card,
-.questions-form-card,
-.prayer-form-card {
-padding: 28px 22px;
-}
+    .hero h2 {
+        font-size: 3.35rem;
+    }
 
-.video-grid {
-grid-template-columns: 1fr;
-}
+    .hero-scripture {
+        font-size: 1.3rem;
+    }
 
-.podcast-artwork {
-width: 100%;
-max-width: 350px;
-}
+    .hero-description {
+        font-size: 0.94rem;
+    }
 
-.ribbon-photo {
-width: 260px;
-height: 190px;
-}
 
-.event-flyer-image {
-max-width: 100%;
-}
+    /* BUTTON STACKING */
+
+    .hero-buttons,
+    .lesson-buttons,
+    .podcast-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a,
+    .lesson-buttons a,
+    .podcast-buttons a {
+        width: 100%;
+    }
+
+
+    /* CARDS */
+
+    .current-lesson-card,
+    .lesson-library-card,
+    .questions-form-card,
+    .prayer-form-card {
+        padding: 28px 22px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .visual-events-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Make event flyers prominent on phone */
+
+    .event-image {
+        height: 470px;
+    }
+
+    .visual-event-info {
+        padding: 25px 22px;
+    }
+
+    .visual-event-info .primary-button,
+    .visual-event-info .secondary-button {
+        width: 100%;
+    }
+
+
+    /* PODCAST */
+
+    .podcast-logo-cover {
+        width: 100%;
+        max-width: 360px;
+    }
+
+
+    /* PHOTO RIBBON */
+
+    .ribbon-photo {
+        width: 270px;
+        height: 195px;
+    }
 
 }
 
 
 /* =========================================================
-ACCESSIBILITY — REDUCE MOTION
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .event-image {
+        height: 420px;
+    }
+
+    .hero h2 {
+        font-size: 3rem;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-html {
-scroll-behavior: auto;
-}
+    html {
+        scroll-behavior: auto;
+    }
 
-.photo-track {
-animation: none;
-}
+    .photo-track {
+        animation: none;
+    }
 
 }
