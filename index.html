@@ -2,19 +2,63 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Beyond the Surface</title>
+    <title>Beyond the Surface</title>
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .hero {
+            min-height: 0 !important;
+            height: auto !important;
+            padding: 35px 20px 50px !important;
+            background: #ffffff !important;
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            text-align: center !important;
+        }
+
+        .hero-content {
+            width: min(1000px, 100%) !important;
+            margin: 0 auto !important;
+        }
+
+        .gathering-place-logo {
+            display: block !important;
+            width: min(850px, 96%) !important;
+            height: auto !important;
+            max-height: 500px !important;
+            object-fit: contain !important;
+            margin: 0 auto 25px !important;
+        }
+
+        .hero-description {
+            max-width: 720px !important;
+            margin: 0 auto !important;
+        }
+
+        @media (max-width: 650px) {
+            .hero {
+                padding: 22px 12px 38px !important;
+            }
+
+            .gathering-place-logo {
+                width: 100% !important;
+                max-height: 360px !important;
+                margin: 0 auto 18px !important;
+            }
+
+            .hero-description {
+                padding: 0 12px !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
-<!-- =====================================================
-HEADER
-===================================================== -->
 
 <header class="site-header">
 
@@ -36,18 +80,16 @@ HEADER
 
 <main>
 
-<!-- =====================================================
-HERO
-===================================================== -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
     <div class="hero-content">
 
         <img
-    src="/gathering-place-logo.png"
-    alt="The Gathering Place"
-    class="gathering-place-logo">
+            src="/gathering-place-logo.png"
+            alt="The Gathering Place"
+            class="gathering-place-logo">
 
         <p class="hero-description">
             A space for real conversations, authentic stories,
@@ -60,76 +102,7 @@ HERO
 </section>
 
 
-<!-- =====================================================
-TOP MOVING PHOTO BANNER
-===================================================== -->
-
-<section class="top-ribbon-section">
-
-    <div class="top-photo-ribbon">
-
-        <div class="top-photo-track">
-
-            <div class="top-ribbon-photo">
-                <img src="top1.jpg" alt="Beyond the Surface community">
-            </div>
-
-            <div class="top-ribbon-photo">
-                <img src="top2.jpg" alt="Beyond the Surface community">
-            </div>
-
-            <div class="top-ribbon-photo">
-                <img src="top3.jpg" alt="Beyond the Surface community">
-            </div>
-
-            <div class="top-ribbon-photo">
-                <img src="top4.jpg" alt="Beyond the Surface community">
-            </div>
-
-            <div class="top-ribbon-photo">
-                <img src="top5.jpg" alt="Beyond the Surface community">
-            </div>
-
-            <div class="top-ribbon-photo">
-                <img src="top6.jpg" alt="Beyond the Surface community">
-            </div>
-
-            <!-- DUPLICATE SET FOR CONTINUOUS MOVEMENT -->
-
-            <div class="top-ribbon-photo">
-                <img src="top1.jpg" alt="">
-            </div>
-
-            <div class="top-ribbon-photo">
-                <img src="top2.jpg" alt="">
-            </div>
-
-            <div class="top-ribbon-photo">
-                <img src="top3.jpg" alt="">
-            </div>
-
-            <div class="top-ribbon-photo">
-                <img src="top4.jpg" alt="">
-            </div>
-
-            <div class="top-ribbon-photo">
-                <img src="top5.jpg" alt="">
-            </div>
-
-            <div class="top-ribbon-photo">
-                <img src="top6.jpg" alt="">
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-THE REASON
-===================================================== -->
+<!-- THE REASON -->
 
 <section class="reason-section" id="the-reason">
 
@@ -192,9 +165,7 @@ THE REASON
 </section>
 
 
-<!-- =====================================================
-BIBLE STUDY
-===================================================== -->
+<!-- BIBLE STUDY -->
 
 <section class="bible-study-section" id="bible-study">
 
@@ -239,6 +210,7 @@ BIBLE STUDY
                 character that can be seen, experienced
                 and reproduced in the lives of others.
             </p>
+
 
             <div class="study-details">
 
@@ -306,9 +278,7 @@ BIBLE STUDY
 </section>
 
 
-<!-- =====================================================
-PODCAST
-===================================================== -->
+<!-- PODCAST -->
 
 <section class="podcast-section" id="podcast">
 
@@ -377,9 +347,7 @@ PODCAST
 </section>
 
 
-<!-- =====================================================
-YOU GOT QUESTIONS?
-===================================================== -->
+<!-- QUESTIONS -->
 
 <section class="questions-section">
 
@@ -460,9 +428,7 @@ YOU GOT QUESTIONS?
 </section>
 
 
-<!-- =====================================================
-COMMUNITY
-===================================================== -->
+<!-- COMMUNITY -->
 
 <section class="community-section" id="community">
 
@@ -530,7 +496,47 @@ COMMUNITY
         </article>
 
 
-        <!-- HEART WALK + EBONY -->
+        <!-- NEW THE CITY KC EVENT -->
+
+        <article class="visual-event-card">
+
+            <div class="event-image">
+
+                <img
+                    src="new-event.jpg"
+                    alt="Upcoming event at The City KC">
+
+            </div>
+
+            <div class="visual-event-info">
+
+                <p class="event-category">
+                    COMMUNITY EVENT • THE CITY KC
+                </p>
+
+                <h3>
+                    Upcoming Event at The City KC
+                </h3>
+
+                <p>
+                    Join The City KC for an opportunity to gather,
+                    connect, grow in faith and build community.
+                </p>
+
+                <a
+                    href="https://thecitykc.churchcenter.com/registrations/events/3837557"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="primary-button">
+                    View Event Details
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- HEART WALK -->
 
         <article class="visual-event-card heart-story-card">
 
@@ -545,12 +551,13 @@ COMMUNITY
             <div class="visual-event-info">
 
                 <p class="event-category">
-                    HEART & STROKE WALK • SEPTEMBER 26
+                    HEART &amp; STROKE WALK • SEPTEMBER 26
                 </p>
 
                 <h3>
                     Walk With Purpose
                 </h3>
+
 
                 <div class="ebony-story">
 
@@ -579,6 +586,7 @@ COMMUNITY
 
                 </div>
 
+
                 <p>
                     Join us as we walk with Ebony and support
                     heart and stroke awareness, healthier families,
@@ -586,7 +594,7 @@ COMMUNITY
                 </p>
 
                 <a
-                    href="https://www2.heart.org/site/TR/HeartWalk/MWA-MidWestAffiliate?pg=team&team_id=974914&fr_id=13168"
+                    href="https://www2.heart.org/site/TR/HeartWalk/MWA-MidWestAffiliate?pg=team&amp;team_id=974914&amp;fr_id=13168"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="primary-button">
@@ -667,7 +675,7 @@ COMMUNITY
             <div class="visual-event-info">
 
                 <p class="event-category">
-                    GET OUT & CONNECT
+                    GET OUT &amp; CONNECT
                 </p>
 
                 <h3>
@@ -747,9 +755,7 @@ COMMUNITY
 </section>
 
 
-<!-- =====================================================
-PRAYER
-===================================================== -->
+<!-- PRAYER -->
 
 <section class="prayer-section" id="prayer">
 
@@ -866,9 +872,7 @@ PRAYER
 </section>
 
 
-<!-- =====================================================
-BOTTOM MOVING PHOTO BANNER
-===================================================== -->
+<!-- BOTTOM MOVING PHOTO BANNER -->
 
 <section class="memories-section">
 
@@ -917,7 +921,6 @@ BOTTOM MOVING PHOTO BANNER
                 <img src="event6.jpg" alt="Beyond the Surface community">
             </div>
 
-            <!-- DUPLICATE SET -->
 
             <div class="ribbon-photo">
                 <img src="event1.jpg" alt="">
@@ -952,10 +955,6 @@ BOTTOM MOVING PHOTO BANNER
 </main>
 
 
-<!-- =====================================================
-FOOTER
-===================================================== -->
-
 <footer class="site-footer">
 
     <div class="footer-container">
@@ -971,6 +970,7 @@ FOOTER
             </p>
 
         </div>
+
 
         <div class="footer-links">
 
@@ -991,5 +991,4 @@ FOOTER
 </footer>
 
 </body>
-
 </html>
