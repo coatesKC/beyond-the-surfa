@@ -6,17 +6,6 @@
 /* =========================================
    RESET
 ========================================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -1465,4 +1454,89 @@ p {
         animation: none;
     }
 
+}
+/* =========================================
+   GATHERING PLACE HERO FIX
+========================================= */
+
+body {
+    background: #ffffff;
+}
+
+.hero {
+    min-height: auto;
+    padding: 45px 20px 55px;
+    background: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-content {
+    width: min(900px, 100%);
+    margin: 0 auto;
+}
+
+.gathering-place-logo {
+    display: block;
+    width: min(700px, 90%);
+    max-height: 420px;
+    margin: 0 auto 25px;
+
+    object-fit: contain;
+}
+
+.hero-description {
+    max-width: 680px;
+    margin: 0 auto;
+
+    color: #6d665f;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .hero {
+        min-height: auto;
+        padding: 35px 20px 45px;
+    }
+
+    .gathering-place-logo {
+        width: min(620px, 94%);
+        max-height: 360px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .hero {
+        min-height: auto;
+        padding: 25px 15px 40px;
+    }
+
+    .gathering-place-logo {
+        width: 100%;
+        max-height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        padding: 0 10px;
+        font-size: 0.94rem;
+    }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 420px) {
+    .gathering-place-logo {
+        max-height: 245px;
+    }
 }
