@@ -5,15 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Beyond the Surface</title>
+    <title>The Gathering Place</title>
 
     <link rel="stylesheet" href="css/style.css">
 
     <style>
+        html,
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        main,
+        section {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .reason-container,
+        .bible-study-container,
+        .podcast-container,
+        .questions-container,
+        .visual-events-grid,
+        .prayer-container,
+        .footer-container {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
         .hero {
             min-height: 0 !important;
             height: auto !important;
-            padding: 35px 20px 50px !important;
+            width: 100% !important;
+            padding: 30px 0 !important;
             background: #ffffff !important;
             display: flex !important;
             justify-content: center !important;
@@ -22,37 +49,119 @@
         }
 
         .hero-content {
-            width: min(1000px, 100%) !important;
+            width: 100% !important;
             margin: 0 auto !important;
         }
 
         .gathering-place-logo {
             display: block !important;
-            width: min(850px, 96%) !important;
+            width: min(1100px, 96vw) !important;
             height: auto !important;
-            max-height: 500px !important;
+            max-height: 430px !important;
             object-fit: contain !important;
-            margin: 0 auto 25px !important;
+            margin: 0 auto !important;
         }
 
         .hero-description {
-            max-width: 720px !important;
-            margin: 0 auto !important;
+            width: min(760px, 90%);
+            margin: 24px auto 0 !important;
+            text-align: center;
+        }
+
+        .section-heading,
+        .section-heading h2 {
+            max-width: 100% !important;
+        }
+
+        .section-heading h2 {
+            overflow-wrap: normal;
+            word-break: normal;
+            text-align: center;
+        }
+
+        .footer-logo-banner {
+            width: min(620px, 92%);
+            margin: 0 auto 30px;
+            padding: 12px 20px;
+            background: #ffffff;
+        }
+
+        .footer-logo {
+            display: block;
+            width: 100%;
+            max-height: 230px;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+
+        .event-image {
+            position: relative;
+        }
+
+        .date-badge {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            z-index: 5;
+            width: 74px;
+            min-height: 78px;
+            padding: 8px 6px;
+            background: #ffffff;
+            border: 1px solid #b6975b;
+            box-shadow: 0 8px 22px rgba(51, 46, 43, 0.16);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .date-month {
+            color: #896e3d;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            line-height: 1;
+        }
+
+        .date-day {
+            margin-top: 5px;
+            color: #332e2b;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2rem;
+            line-height: 1;
         }
 
         @media (max-width: 650px) {
             .hero {
-                padding: 22px 12px 38px !important;
+                padding: 18px 0 !important;
             }
 
             .gathering-place-logo {
                 width: 100% !important;
-                max-height: 360px !important;
-                margin: 0 auto 18px !important;
+                max-height: 320px !important;
+                margin: 0 auto !important;
             }
 
             .hero-description {
-                padding: 0 12px !important;
+                width: 90%;
+                margin-top: 18px !important;
+                padding: 0 !important;
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+
+            .reason-section .section-heading h2,
+            .memories-section .section-heading h2 {
+                width: 100%;
+                font-size: clamp(2.15rem, 10vw, 3rem) !important;
+                line-height: 1.08 !important;
+                white-space: normal !important;
+            }
+
+            .footer-logo-banner {
+                width: 96%;
+                padding: 8px 12px;
             }
         }
     </style>
@@ -63,8 +172,8 @@
 <header class="site-header">
 
     <div class="logo-area">
-        <h1>Beyond the Surface</h1>
-        <p>Real Conversations • Authentic Stories • Meaningful Connections</p>
+        <h1>The Gathering Place</h1>
+        <p>Room at the Table • Come Be Filled</p>
     </div>
 
     <nav class="main-nav">
@@ -87,7 +196,7 @@
     <div class="hero-content">
 
         <img
-            src="/gathering-place-logo.png"
+            src="gathering-place-logo.png"
             alt="The Gathering Place"
             class="gathering-place-logo">
 
@@ -102,7 +211,7 @@
 </section>
 
 
-<!-- THE REASON -->
+<!-- WRESTLING WITH THE WORD -->
 
 <section class="reason-section" id="the-reason">
 
@@ -113,12 +222,12 @@
         </p>
 
         <h2>
-            The Reason
+            Wrestling with the Word
         </h2>
 
         <p>
-            A weekly reflection on Scripture, life,
-            and the lessons found beneath the surface.
+            Looking deeply into God's Word, examining our own hearts,
+            and allowing His truth to transform the way we live.
         </p>
 
     </div>
@@ -130,7 +239,7 @@
 
             <iframe
                 src="https://www.youtube.com/embed/erx_9wOy0bE"
-                title="The Reason - Weekly Reflection"
+                title="Wrestling with the Word - Weekly Reflection"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen>
             </iframe>
@@ -145,13 +254,13 @@
             </p>
 
             <h3>
-                The Reason
+                Wrestling with the Word
             </h3>
 
             <p>
-                Sometimes the lesson is found in what we stop long
-                enough to notice. Take a few moments to reflect,
-                listen, and go beyond the surface.
+                We do not rush past difficult passages or settle for
+                surface answers. We slow down, ask honest questions,
+                search the Scriptures, and allow the Word to search us.
             </p>
 
             <p class="reason-new">
@@ -458,6 +567,11 @@
 
             <div class="event-image">
 
+                <div class="date-badge" aria-label="September 4">
+                    <span class="date-month">SEP</span>
+                    <span class="date-day">04</span>
+                </div>
+
                 <img
                     src="water-retreat.jpg"
                     alt="Water Retreat for Girls">
@@ -496,31 +610,42 @@
         </article>
 
 
-        <!-- NEW THE CITY KC EVENT -->
+        <!-- KC DAY OF HOPE -->
 
         <article class="visual-event-card">
 
             <div class="event-image">
 
+                <div class="date-badge" aria-label="September 19">
+                    <span class="date-month">SEP</span>
+                    <span class="date-day">19</span>
+                </div>
+
                 <img
                     src="new-event.jpg"
-                    alt="Upcoming event at The City KC">
+                    alt="KC Day of Hope">
 
             </div>
 
             <div class="visual-event-info">
 
                 <p class="event-category">
-                    COMMUNITY EVENT • THE CITY KC
+                    COMMUNITY OUTREACH • SEPTEMBER 19
                 </p>
 
                 <h3>
-                    Upcoming Event at The City KC
+                    KC Day of Hope
                 </h3>
 
+                <p class="event-theme">
+                    9:30 AM–2:00 PM • Central Park
+                </p>
+
                 <p>
-                    Join The City KC for an opportunity to gather,
-                    connect, grow in faith and build community.
+                    Join Aroma Church and KC Day of Hope as we serve
+                    families with free groceries, medical screenings,
+                    haircuts, job services, family portraits and
+                    activities for children.
                 </p>
 
                 <a
@@ -528,7 +653,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="primary-button">
-                    View Event Details
+                    Register to Serve
                 </a>
 
             </div>
@@ -541,6 +666,11 @@
         <article class="visual-event-card heart-story-card">
 
             <div class="event-image">
+
+                <div class="date-badge" aria-label="September 26">
+                    <span class="date-month">SEP</span>
+                    <span class="date-day">26</span>
+                </div>
 
                 <img
                     src="heart-walk-flyer.jpg"
@@ -611,6 +741,11 @@
         <article class="visual-event-card">
 
             <div class="event-image">
+
+                <div class="date-badge" aria-label="October 3">
+                    <span class="date-month">OCT</span>
+                    <span class="date-day">03</span>
+                </div>
 
                 <img
                     src="down-syndrome-walk.jpg"
@@ -959,15 +1094,12 @@
 
     <div class="footer-container">
 
-        <div class="footer-brand">
+        <div class="footer-logo-banner">
 
-            <h2>
-                Beyond the Surface
-            </h2>
-
-            <p>
-                Where the hidden places become an offering.
-            </p>
+            <img
+                src="gathering-place-logo.png"
+                alt="The Gathering Place"
+                class="footer-logo">
 
         </div>
 
@@ -983,7 +1115,7 @@
         </div>
 
         <p class="footer-copy">
-            © 2026 Beyond the Surface
+            © 2026 The Gathering Place
         </p>
 
     </div>
