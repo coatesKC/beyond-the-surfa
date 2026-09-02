@@ -13,6 +13,7 @@
     <meta name="apple-mobile-web-app-title" content="The Gathering Place">
 
     <!-- These rules keep the Gathering Place logo large and centered. -->
+  
     <style>
         html,
         body {
@@ -168,6 +169,46 @@
                 padding: 8px 12px;
             }
         }
+        /* DESKTOP BANNER CORRECTION */
+
+@media (min-width: 651px) {
+    .hero {
+        padding: 15px 0 30px !important;
+    }
+
+    .gathering-place-logo {
+        width: min(850px, 86vw) !important;
+        height: auto !important;
+        max-height: 310px !important;
+        object-fit: contain !important;
+        margin: 0 auto !important;
+    }
+
+    .hero-description {
+        margin-top: 12px !important;
+    }
+}
+
+/* KEEP THE BOTTOM TITLE CENTERED AND VISIBLE */
+
+.memories-section .section-heading {
+    width: min(1050px, 92vw) !important;
+    max-width: 92vw !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.memories-section .section-heading h2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    font-size: clamp(2.2rem, 5vw, 3.6rem) !important;
+    line-height: 1.1 !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    text-align: center !important;
+}
     </style>
 </head>
 
