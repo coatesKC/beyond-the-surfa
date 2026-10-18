@@ -1,4 +1,4 @@
-const CACHE_NAME = "gathering-place-v1";
+const CACHE_NAME = "gathering-place-v2";
 
 const APP_SHELL = [
   "./",
@@ -55,7 +55,7 @@ self.addEventListener("fetch", (event) => {
 
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
-      return cachedResponse || fetch(event.request);
+      return fetch(event.request).then((response) => { if (response.ok && new URL(event.request.url).origin === self.location.origin) { const copy = response.clone(); caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy)); } return response; }).catch(() => cachedResponse);
     })
   );
 });
