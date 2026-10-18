@@ -1,4 +1,4 @@
-const CACHE_NAME = "gathering-place-v1";
+const CACHE_NAME = "gathering-place-v2-gratitude";
 
 const APP_SHELL = [
   "./",
@@ -23,7 +23,7 @@ self.addEventListener("activate", (event) => {
     caches.keys().then((cacheNames) =>
       Promise.all(
         cacheNames
-          .filter((cacheName) => cacheName !== CACHE_NAME)
+          .filter((cacheName) => cacheName.startsWith("gathering-place-") && cacheName !== CACHE_NAME)
           .map((cacheName) => caches.delete(cacheName))
       )
     )
@@ -34,6 +34,10 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+  const url = new URL(event.request.url);
+  if (url.origin !== self.location.origin) return;
+  // Never cache auth, shared feed data, or the online-only gratitude page.
+  if (url.pathname.includes("gratitude")) return;
 
   if (event.request.mode === "navigate") {
     event.respondWith(

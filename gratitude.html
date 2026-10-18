@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gratitude Wall · The Gathering Place</title>
+  <meta name="theme-color" content="#b6975b">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="app-icon-192.png">
+  <link rel="stylesheet" href="gratitude.css">
+  <script src="gratitude-config.js" defer></script><script src="gratitude.js" defer></script>
+</head>
+<body>
+  <header><a href="./index.html" class="brand">The Gathering Place<span>THERE’S ROOM AT THE TABLE</span></a><a href="./index.html">← Back home</a></header>
+  <main>
+    <div class="intro"><p class="eyebrow">A LITTLE GRATITUDE. A LITTLE EVERY DAY.</p><h1>Good things grow<br>when we share them.</h1><p>A small blessing. A kind word. A moment worth remembering.<br>There’s room for yours here.</p></div>
+    <div class="layout">
+      <aside>
+        <div class="card prompt"><p class="eyebrow" id="today">TODAY’S REFLECTION</p><h2>What are you grateful for today?</h2><p id="daily-hint">Pause and notice one small blessing.</p><a href="#share" class="button">Share your gratitude ↓</a></div>
+        <div class="note"><h3>A welcoming space</h3><p>Celebrate the little things. Encourage one another. Share only photos you have permission to post.</p><p><strong>Posts and comments are public.</strong> Your email stays private.</p></div>
+      </aside>
+      <div>
+        <div id="status" role="status" aria-live="polite"></div>
+        <div class="card" id="share">
+          <h2>Bring a little joy to the table.</h2>
+          <div id="auth-area">
+            <p>Read freely. Sign in with an email code to share or comment—no password to remember.</p>
+            <form id="email-form"><label for="email">Email address</label><input id="email" type="email" autocomplete="email" required maxlength="254"><button class="button" disabled>Send sign-in code</button></form>
+            <form id="code-form" hidden><label for="code">Code from your email</label><input id="code" inputmode="numeric" autocomplete="one-time-code" required pattern="[0-9]{6,10}" maxlength="10"><button class="button">Sign in</button></form>
+          </div>
+          <form id="post-form" hidden>
+            <div class="row"><p>You’re signed in.</p><button type="button" id="signout" class="quiet">Sign out</button></div>
+            <label for="display-name">Name shown with your posts</label><input id="display-name" required maxlength="50" autocomplete="given-name" placeholder="Your first name">
+            <label for="message">Today, I’m grateful for…</label><textarea id="message" rows="4" maxlength="2000" placeholder="A little moment that made a difference…"></textarea>
+            <label for="photo">Add a photo (optional · JPG, PNG or WebP · up to 5 MB)</label><input id="photo" type="file" accept="image/jpeg,image/png,image/webp">
+            <div id="photo-preview" hidden><img id="preview" alt="Your selected photo"><button class="quiet" type="button" id="remove-photo">Remove photo</button></div>
+            <label for="photo-description">Photo description (optional)</label><input id="photo-description" maxlength="200" placeholder="Describe your picture for people who cannot see it">
+            <p class="privacy">Your post will be visible to everyone. Add text, a photo, or both.</p><button class="button">Post gratitude</button>
+          </form>
+        </div>
+        <div class="row feed-heading"><h2>Our gratitude wall</h2><button id="refresh" class="quiet" disabled>Refresh</button></div>
+        <div id="feed" aria-live="polite"><div class="card"><p>The gratitude wall is being prepared. Please check back soon.</p></div></div>
+        <button id="more" class="quiet" hidden>Load more</button>
+      </div>
+    </div>
+  </main><footer>Faith · Friendship · Gratitude<br>The Gathering Place</footer>
+  <noscript><p>Please enable JavaScript to read and share gratitude posts.</p></noscript>
+</body></html>
