@@ -1565,3 +1565,40 @@ body {
   .section-heading { max-width: 100%; }
   .reason-video-wrapper iframe { width: 100%; }
 }
+
+
+/* Phone-only Events and Community Resources cards */
+@media (max-width: 650px) {
+  .community-section { width: 100%; padding: 44px 16px !important; }
+  .community-section .section-heading { width: 100%; padding: 0 4px; }
+  .community-section .visual-events-grid {
+    display: grid; grid-template-columns: minmax(0, 1fr) !important;
+    width: 100%; max-width: 100%; gap: 22px;
+  }
+  .community-section .visual-event-card {
+    width: 100%; min-width: 0; max-width: 100%;
+    margin: 0; overflow: hidden; border-radius: 8px;
+  }
+  .community-section .event-image,
+  .community-section .resource-image {
+    box-sizing: border-box; width: 100%; max-width: 100%;
+    height: auto !important; aspect-ratio: 4 / 3;
+    min-height: 0; overflow: hidden;
+  }
+  .community-section .event-image img {
+    display: block; width: 100%; height: 100%;
+    max-width: 100%; object-fit: contain;
+  }
+  .community-section .resource-image img { object-fit: cover; }
+  .community-section .visual-event-info { padding: 18px 16px !important; }
+  .community-section .visual-event-info h3 {
+    font-size: clamp(1.35rem, 6vw, 1.75rem);
+    overflow-wrap: anywhere;
+  }
+  .community-section .visual-event-info .primary-button,
+  .community-section .visual-event-info .secondary-button {
+    box-sizing: border-box; width: 100%; max-width: 100%;
+    white-space: normal; text-align: center; overflow-wrap: anywhere;
+  }
+  .community-section .ebony-story { padding: 14px; margin: 14px 0; }
+}
