@@ -477,6 +477,41 @@
             .bible-study-section .current-lesson-card {padding:20px 18px !important;}
             .bible-study-section .study-details {gap:4px 12px !important;}
         }
+
+        /* Refined compact pill navigation under the original logo */
+        .hero .hero-nav {
+            display:flex !important;flex-wrap:wrap !important;
+            justify-content:center !important;align-items:center !important;
+            gap:9px 11px !important;max-width:880px !important;
+            padding:8px 16px 0 !important;
+        }
+        .hero .hero-nav a {
+            display:inline-flex !important;align-items:center !important;
+            justify-content:center !important;width:auto !important;
+            min-height:42px !important;padding:9px 17px !important;
+            border:1px solid #ddcfb4 !important;border-radius:999px !important;
+            background:#f8f4eb !important;color:#354b3d !important;
+            font-weight:600 !important;font-size:clamp(.86rem,1.4vw,1rem) !important;
+            line-height:1.2 !important;white-space:nowrap !important;
+            text-decoration:none !important;
+            box-shadow:0 2px 9px rgba(60,57,45,.05) !important;
+            transition:background .18s ease,transform .18s ease,box-shadow .18s ease;
+        }
+        .hero .hero-nav a[href="community.html"] {
+            background:#294c3e !important;border-color:#294c3e !important;
+            color:#fff9ee !important;box-shadow:0 4px 12px rgba(37,72,57,.17) !important;
+        }
+        .hero .hero-nav a:hover,.hero .hero-nav a:focus-visible {
+            background:#e8dec9 !important;color:#294c3e !important;
+            transform:translateY(-2px);box-shadow:0 5px 14px rgba(60,57,45,.12) !important;
+        }
+        .hero .hero-nav a[href="community.html"]:hover,.hero .hero-nav a[href="community.html"]:focus-visible {
+            background:#386451 !important;color:#fff !important;
+        }
+        @media(max-width:650px) {
+            .hero .hero-nav {gap:8px !important;padding:4px 10px 0 !important;}
+            .hero .hero-nav a {min-height:39px !important;padding:9px 12px !important;font-size:.82rem !important;}
+        }
     </style>
 </head>
 
