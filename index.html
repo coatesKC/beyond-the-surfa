@@ -263,6 +263,49 @@
           .visual-event-card, .visual-event-info { min-width: 0 !important; max-width: 100% !important; }
           .visual-event-card video, .visual-event-card img { width: 100% !important; max-width: 100% !important; }
         }
+
+
+        /* Inviting, professional header and accessible responsive navigation */
+        .site-header .logo-area h1 { font-size:clamp(1.65rem,2.8vw,2.45rem); line-height:1.15; letter-spacing:-.025em; }
+        .site-header .logo-area p { font-size:clamp(.68rem,1vw,.82rem); letter-spacing:1.1px; line-height:1.6; }
+        .site-header .main-nav { gap:10px 12px !important; }
+        .site-header .main-nav a {
+            font-size:.88rem; font-weight:600; padding:10px 15px; border-radius:999px;
+            border:1px solid transparent; transition:background .2s,border-color .2s,color .2s;
+            white-space:normal !important; text-align:center;
+        }
+        .site-header .main-nav a:hover, .site-header .main-nav a:focus-visible {
+            background:#f5f1e9; border-color:#d9c7a4; color:#6f592d;
+        }
+        .community-welcome {
+            width:100%; max-width:100%; min-width:0; box-sizing:border-box;
+            padding:clamp(48px,7vw,90px) 22px; text-align:center; background:#f5f1e9;
+        }
+        .community-welcome-inner { max-width:780px; min-width:0; width:100%; margin:0 auto; }
+        .community-welcome h2 {
+            margin:16px auto 22px; font-size:clamp(2.3rem,5.4vw,4.2rem);
+            line-height:1.12; letter-spacing:-.03em; overflow-wrap:normal;
+        }
+        .community-welcome-lead { max-width:650px; margin:0 auto 28px; font-size:clamp(1rem,2vw,1.2rem); line-height:1.8; }
+        .community-welcome .primary-button { padding:15px 30px; max-width:100%; white-space:normal; text-align:center; }
+        .community-welcome-secondary { margin:18px auto 0; font-size:.94rem; }
+        .community-welcome-secondary a { color:#6f592d; text-decoration:underline; text-underline-offset:4px; }
+        @media(max-width:650px) {
+            .site-header { padding:19px 16px !important; row-gap:16px !important; }
+            .site-header .logo-area h1 { font-size:clamp(1.75rem,7vw,2.2rem); }
+            .site-header .main-nav {
+                display:grid !important; grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+                width:100% !important; gap:9px !important;
+            }
+            .site-header .main-nav a {
+                width:100%; box-sizing:border-box; min-width:0; border:1px solid #e1d8c9;
+                background:#faf7f1; border-radius:9px; padding:11px 7px;
+                font-size:.84rem; line-height:1.35; overflow-wrap:break-word;
+            }
+            .site-header .main-nav a:last-child { grid-column:1 / -1; }
+            .community-welcome { padding:48px 20px 54px; }
+            .community-welcome h2 { font-size:clamp(2rem,9vw,3rem); }
+        }
     </style>
 </head>
 
@@ -270,13 +313,14 @@
     <header class="site-header">
         <div class="logo-area">
             <h1>The Gathering Place</h1>
-            <p>Room at the Table • Come Be Filled</p>
+            <p>There’s Room at the Table • Come Be Filled</p>
         </div>
 
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Main navigation">
             <a href="#home">Home</a>
+            <a href="community.html">Gather &amp; Share</a>
             <a href="#bible-study">Bible Study</a>
-            <a href="community.html">Community Wall</a>
+            <a href="#community">Events &amp; Resources</a>
             <a href="#prayer">Prayer</a>
         </nav>
     </header>
@@ -300,26 +344,22 @@
         </section>
 
         <!-- COMMUNITY: FRONT AND CENTER -->
-        <section id="community-welcome" aria-labelledby="community-welcome-heading" style="width:100%;max-width:100%;min-width:0;box-sizing:border-box;padding:clamp(32px,6vw,72px) 18px;background:#f5f1e9;text-align:center;overflow-wrap:anywhere;">
-            <div style="max-width:760px;width:100%;margin:0 auto;min-width:0;box-sizing:border-box;">
-                <p class="section-small">THERE'S ROOM AT THE TABLE</p>
-                <h2 id="community-welcome-heading" style="font-size:clamp(1.8rem,5vw,2.7rem);line-height:1.2;margin:12px 0 18px;">What's on Your Heart Today?</h2>
-                <p style="font-size:clamp(1rem,2.5vw,1.16rem);line-height:1.7;margin:0 auto 14px;max-width:630px;">What are you grateful for today? Share your thoughts, post a picture, or simply be encouraged by what others are sharing.</p>
-                <p style="line-height:1.6;margin:0 auto 24px;max-width:630px;">Read community posts anytime. Sign up for a free account to share your own moments and connect with others.</p>
-                <a class="primary-button" href="community.html" style="display:inline-block;max-width:100%;box-sizing:border-box;white-space:normal;text-align:center;padding:14px 24px;">Share Your Moment</a>
-                <p style="margin:18px 0 0;"><a href="community.html" style="text-decoration:underline;">Visit the Community Wall &amp; see recent posts →</a></p>
+        <section id="community-welcome" class="community-welcome" aria-labelledby="community-welcome-heading">
+            <div class="community-welcome-inner">
+                <p class="section-small">COMMUNITY &amp; CONNECTION</p>
+                <h2 id="community-welcome-heading">Come as You Are.<br>There’s Room for You.</h2>
+                <p class="community-welcome-lead">Share what you’re grateful for, celebrate life’s moments, and encourage one another. Every story matters, including yours.</p>
+                <a class="primary-button" href="community.html">Join the Conversation</a>
+                <p class="community-welcome-secondary"><a href="community.html">Explore the Community Wall →</a></p>
             </div>
         </section>
 
         <!-- BIBLE STUDY -->
         <section class="bible-study-section" id="bible-study">
             <div class="section-heading">
-                <p class="section-small">GROW WITH US</p>
-                <h2>This Week's Bible Study</h2>
-                <p>
-                    Come as you are. Bring your Bible, your questions,
-                    your experiences and an open heart.
-                </p>
+                <p class="section-small">GROW TOGETHER IN THE WORD</p>
+                <h2>Gather Around the Word</h2>
+                <p>Join us each Saturday as we explore Scripture, ask meaningful questions, and grow in our understanding of God’s Word.</p>
             </div>
 
             <div class="bible-study-container" style="grid-template-columns:minmax(0,1fr);max-width:850px;">
@@ -341,7 +381,7 @@
                             target="_blank"
                             rel="noopener noreferrer"
                             class="primary-button">
-                            Register for Bible Study
+                            Join Us This Saturday
                         </a>
 
                         <span class="secondary-button" style="display:inline-block;opacity:.75;">Updated Study Guide Coming Soon</span>
@@ -365,8 +405,7 @@
                 <h2>What's Happening</h2>
                 <p><a class="primary-button" href="submit.html" style="display:inline-block;padding:12px 20px;max-width:100%;box-sizing:border-box;text-align:center;">Submit an Event or Resource</a></p>
                 <p>
-                    Gather with us, support causes that matter,
-                    discover resources and connect with the community.
+                    From uplifting events to helpful resources, discover ways to gather, grow, support one another, and stay encouraged.
                 </p>
             </div>
 
@@ -531,7 +570,7 @@
             <div class="footer-links">
                 <a href="#home">Home</a>
                 <a href="#bible-study">Bible Study</a>
-                    <a href="community.html">Community Wall</a>
+                    <a href="community.html">Gather &amp; Share</a>
                 <a href="#prayer">Prayer</a>
             </div>
 
