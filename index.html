@@ -306,6 +306,54 @@
             .community-welcome { padding:48px 20px 54px; }
             .community-welcome h2 { font-size:clamp(2rem,9vw,3rem); }
         }
+
+        /* Understated navigation: links instead of large boxed buttons */
+        .site-header .main-nav {
+            display:flex !important;
+            flex-wrap:wrap !important;
+            align-items:center !important;
+            justify-content:center !important;
+            gap:8px 24px !important;
+        }
+        .site-header .main-nav a {
+            display:inline-block !important;
+            width:auto !important;
+            min-width:0 !important;
+            padding:8px 2px !important;
+            background:transparent !important;
+            border:0 !important;
+            border-radius:0 !important;
+            color:#332e2b !important;
+            font-size:clamp(.9rem,1.2vw,1rem) !important;
+            font-weight:500 !important;
+            line-height:1.45 !important;
+            text-decoration:none;
+            text-underline-offset:6px;
+        }
+        .site-header .main-nav a:hover,
+        .site-header .main-nav a:focus-visible {
+            background:transparent !important;
+            border:0 !important;
+            text-decoration:underline !important;
+            color:#896e3d !important;
+        }
+        @media(max-width:650px) {
+            .site-header .main-nav {
+                display:flex !important;
+                flex-direction:row !important;
+                flex-wrap:wrap !important;
+                gap:6px 18px !important;
+                justify-content:center !important;
+            }
+            .site-header .main-nav a,
+            .site-header .main-nav a:last-child {
+                grid-column:auto !important;
+                flex:0 0 auto !important;
+                padding:8px 1px !important;
+                font-size:.94rem !important;
+            }
+            .hero { padding:12px 0 18px !important; }
+        }
     </style>
 </head>
 
@@ -334,11 +382,7 @@
                     alt="The Gathering Place"
                     class="gathering-place-logo">
 
-                <p class="hero-description">
-                    A space for real conversations, authentic stories,
-                    meaningful connections, community and growth that
-                    goes deeper than what people see on the outside.
-                </p>
+
 
             </div>
         </section>
