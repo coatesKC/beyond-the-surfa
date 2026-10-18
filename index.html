@@ -307,6 +307,50 @@
             .community-welcome h2 { font-size:clamp(2rem,9vw,3rem); }
         }
 
+        /* Rich, compact community invitation: preserve concise wording */
+        .community-welcome {
+            position:relative;
+            isolation:isolate;
+            overflow:hidden;
+            padding:clamp(34px,5vw,58px) 20px !important;
+            background:linear-gradient(120deg,#1f453a 0%,#2e5948 56%,#43614b 100%) !important;
+            color:#fffaf0;
+        }
+        .community-welcome::before,.community-welcome::after {
+            content:"";position:absolute;z-index:-1;pointer-events:none;
+            border:1px solid rgba(218,190,126,.3);border-radius:50%;
+        }
+        .community-welcome::before {width:280px;height:280px;left:-125px;top:-160px;box-shadow:0 0 0 42px rgba(218,190,126,.065);}
+        .community-welcome::after {width:220px;height:220px;right:-100px;bottom:-145px;box-shadow:0 0 0 36px rgba(218,190,126,.06);}
+        .community-welcome-inner {max-width:800px !important;}
+        .community-welcome .section-small {
+            color:#e7ce94 !important;letter-spacing:.22em;
+            font-size:.78rem;font-weight:700;margin:0 0 10px;
+        }
+        .community-welcome h2 {
+            color:#fffaf0 !important;font-size:clamp(2rem,5vw,3.75rem) !important;
+            line-height:1.08 !important;margin:0 auto 12px !important;
+        }
+        .community-welcome-lead {
+            color:#f3ead8 !important;line-height:1.5 !important;
+            margin:0 auto 22px !important;font-size:clamp(1rem,1.7vw,1.13rem) !important;
+        }
+        .community-welcome .primary-button {
+            display:inline-flex;justify-content:center;align-items:center;
+            padding:13px 26px !important;border-radius:999px !important;
+            background:#ead39a !important;color:#263e32 !important;
+            font-weight:700;box-shadow:0 5px 18px rgba(0,0,0,.17);
+            transition:transform .18s ease,background .18s ease;
+        }
+        .community-welcome .primary-button:hover,.community-welcome .primary-button:focus-visible {
+            background:#fff0c7 !important;transform:translateY(-2px);
+        }
+        @media(max-width:650px) {
+            .community-welcome {padding:36px 18px 40px !important;}
+            .community-welcome h2 {font-size:clamp(2.05rem,9vw,2.75rem) !important;}
+            .community-welcome-lead {margin-bottom:18px !important;}
+        }
+
         /* Understated navigation: links instead of large boxed buttons */
         .site-header .main-nav {
             display:flex !important;
