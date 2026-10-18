@@ -424,6 +424,59 @@
             }
             .hero .hero-nav a { flex:0 0 auto !important; font-size:.94rem !important; padding:8px 0 !important; }
         }
+
+        /* Compact visual refresh for home logo and Bible study */
+        .hero {padding:12px 0 20px !important;}
+        .gathering-place-logo {width:min(780px,90vw) !important;max-height:290px !important;}
+        .hero .hero-content {max-width:980px !important;}
+        .hero .hero-nav {margin:0 auto !important;gap:6px 22px !important;padding:0 16px !important;}
+        .hero .hero-nav a {font-size:clamp(.9rem,1.5vw,1.04rem) !important;}
+        .bible-study-section {
+            padding:44px 18px 54px !important;
+            background:linear-gradient(180deg,#f0eee6,#faf7f1) !important;
+        }
+        .bible-study-section .section-heading {margin-bottom:20px !important;}
+        .bible-study-section .section-heading h2 {
+            font-size:clamp(2rem,4.3vw,3.1rem) !important;line-height:1.12 !important;
+            margin:6px auto 0 !important;
+        }
+        .bible-study-section .section-heading .section-small {margin-bottom:4px !important;}
+        .bible-study-section .bible-study-container {max-width:760px !important;}
+        .bible-study-section .current-lesson-card {
+            padding:clamp(22px,4vw,38px) !important;
+            border-radius:18px !important;
+            border:1px solid #ddceae !important;
+            border-top:5px solid #b6975b !important;
+            box-shadow:0 12px 35px rgba(39,44,35,.09) !important;
+        }
+        .bible-study-section .current-lesson-card > h3 {
+            font-size:clamp(1.65rem,3.7vw,2.3rem) !important;
+            line-height:1.18 !important;margin:8px 0 12px !important;
+        }
+        .bible-study-section .lesson-scripture {line-height:1.5 !important;margin:0 0 16px !important;}
+        .bible-study-section .study-details {
+            display:flex !important;gap:6px 16px !important;flex-wrap:wrap !important;
+            padding:13px 0 !important;margin:8px 0 18px !important;
+            border-top:1px solid #e7dcc8;border-bottom:1px solid #e7dcc8;
+        }
+        .bible-study-section .study-details p {margin:0 !important;font-size:1rem !important;}
+        .bible-study-section .lesson-buttons {margin:0 !important;}
+        .bible-study-section .weekly-recap {
+            margin-top:20px !important;padding:18px 20px !important;
+            border-radius:12px !important;
+        }
+        .bible-study-section .weekly-recap h3 {margin:3px 0 6px !important;}
+        .bible-study-section .weekly-recap p:last-child {margin:0 !important;}
+        @media(max-width:650px) {
+            .hero {padding:4px 0 12px !important;}
+            .gathering-place-logo {width:94vw !important;max-height:235px !important;}
+            .hero .hero-nav {gap:4px 13px !important;row-gap:0 !important;padding:0 12px !important;}
+            .hero .hero-nav a {padding:5px 0 !important;font-size:.83rem !important;}
+            .bible-study-section {padding:32px 14px 42px !important;}
+            .bible-study-section .section-heading {margin-bottom:16px !important;}
+            .bible-study-section .current-lesson-card {padding:20px 18px !important;}
+            .bible-study-section .study-details {gap:4px 12px !important;}
+        }
     </style>
 </head>
 
@@ -466,7 +519,6 @@
             <div class="section-heading">
                 <p class="section-small">GROW TOGETHER IN THE WORD</p>
                 <h2>Gather Around the Word</h2>
-                <p>Join us each Saturday as we explore Scripture, ask meaningful questions, and grow in our understanding of God’s Word.</p>
             </div>
 
             <div class="bible-study-container" style="grid-template-columns:minmax(0,1fr);max-width:850px;">
@@ -474,7 +526,6 @@
                     <p class="study-label">CURRENT STUDY</p>
                     <h3>Standing Firm: Faith, Peace &amp; Spiritual Stability</h3>
                     <p class="lesson-scripture">Mark 4:35–41 • Ephesians 6:15–16 • Hebrews 11:1 (KJV)</p>
-                    <p class="lesson-description">Explore what it means to trust God’s Word, stand firm in faith, and find peace even in life’s storms.</p>
 
                     <div class="study-details">
                         <p><strong>Every Saturday</strong></p>
@@ -491,12 +542,10 @@
                             Join Us This Saturday
                         </a>
 
-                        <span class="secondary-button" style="display:inline-block;opacity:.75;">Updated Study Guide Coming Soon</span>
                     </div>
                     <div class="weekly-recap" style="margin-top:28px;padding:24px 20px;background:#f5f1e9;border:1px solid #d9c7a4;max-width:100%;min-width:0;box-sizing:border-box;">
                         <p class="study-label">BEYOND THE LESSON</p>
                         <h3 style="font-size:clamp(1.45rem,5vw,1.9rem);margin:8px 0 12px;">Weekly Video Recap</h3>
-                        <p>Missed the study or want to go deeper? Watch highlights from our conversations, Scripture breakdowns, and key lessons.</p>
                         <p style="font-style:italic;color:#896e3d;margin-top:12px;">First video coming soon.</p>
                     </div>
 
