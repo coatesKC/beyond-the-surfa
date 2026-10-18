@@ -1540,3 +1540,28 @@ body {
         max-height: 245px;
     }
 }
+
+
+/* Mobile viewport: keep page content inside the screen without affecting desktop. */
+*, *::before, *::after { box-sizing: border-box; }
+@media (max-width: 650px) {
+  html, body { width: 100%; max-width: 100%; overflow-x: clip; }
+  main, main > section, .site-header, .site-footer { max-width: 100%; min-width: 0; }
+  .site-header { padding-left: 16px !important; padding-right: 16px !important; }
+  .main-nav { min-width: 0; gap: 10px 14px !important; }
+  .main-nav a { white-space: normal !important; text-align: center; }
+  .hero-content, .reason-container, .bible-study-container,
+  .podcast-container, .questions-container, .prayer-container,
+  .visual-events-grid, .footer-container,
+  .current-lesson-card, .lesson-library-card, .questions-form-card,
+  .prayer-form-card, .visual-event-card, .visual-event-info {
+    width: 100%; max-width: 100%; min-width: 0;
+  }
+  h1, h2, h3, p, a { overflow-wrap: break-word; }
+  img, video, iframe { max-width: 100%; }
+  video { display: block; width: 100%; height: auto; }
+  input, textarea, select, button { max-width: 100%; }
+  .visual-events-grid { grid-template-columns: minmax(0, 1fr); }
+  .section-heading { max-width: 100%; }
+  .reason-video-wrapper iframe { width: 100%; }
+}
