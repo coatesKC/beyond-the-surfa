@@ -1602,3 +1602,27 @@ body {
   }
   .community-section .ebony-story { padding: 14px; margin: 14px 0; }
 }
+
+/* iPhone: top of homepage, header, featured video and upper sections only */
+@media (max-width:650px) {
+  .site-header { width:100%; max-width:100%; grid-template-columns:minmax(0,1fr) !important; }
+  .site-header .logo-area, .site-header .main-nav { min-width:0; max-width:100%; }
+  .main-nav { flex-wrap:wrap !important; justify-content:center !important; gap:8px 12px !important; }
+  .main-nav a { white-space:normal !important; overflow-wrap:anywhere; }
+  .hero, .reason-section, .bible-study-section, .podcast-section, .questions-section {
+    box-sizing:border-box; max-width:100%; min-width:0;
+  }
+  .hero-content { width:100% !important; max-width:100%; min-width:0; padding:0 14px; }
+  .gathering-place-logo { width:100% !important; max-width:100% !important; height:auto; }
+  .hero-description { width:100% !important; max-width:100%; }
+  .reason-container, .reason-video-wrapper {
+    box-sizing:border-box; width:100% !important; max-width:100% !important; min-width:0;
+  }
+  .reason-video-wrapper iframe { display:block; width:100% !important; max-width:100%; height:min(65vh,420px) !important; border:0; }
+  .reason-caption, .reason-section .section-heading,
+  .bible-study-container, .podcast-container, .questions-container {
+    box-sizing:border-box; width:100%; max-width:100%; min-width:0;
+  }
+  .top-photo-ribbon, .photo-ribbon { overflow:hidden; max-width:100%; }
+  .top-photo-track { max-width:none; }
+}
