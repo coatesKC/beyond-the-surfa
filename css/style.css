@@ -1626,3 +1626,29 @@ body {
   .top-photo-ribbon, .photo-ribbon { overflow:hidden; max-width:100%; }
   .top-photo-track { max-width:none; }
 }
+
+/* Fix mobile CSS-grid minimum-content overflow shown in Bible Study screenshot. */
+@media (max-width: 900px) {
+  .bible-study-container,
+  .podcast-container,
+  .questions-container,
+  .prayer-container { grid-template-columns: minmax(0, 1fr) !important; }
+  .bible-study-container > *, .podcast-container > *,
+  .questions-container > *, .prayer-container > * { min-width: 0; }
+}
+@media (max-width: 650px) {
+  .current-lesson-card, .lesson-library-card {
+    min-width: 0; max-width: 100%; width: 100%;
+    padding: 24px 18px !important;
+  }
+  .current-lesson-card h3, .lesson-library-card h3 {
+    overflow-wrap: anywhere; font-size: clamp(1.65rem, 6.5vw, 2rem);
+  }
+  .lesson-scripture, .lesson-description, .study-details { min-width:0; max-width:100%; overflow-wrap:anywhere; }
+  .lesson-buttons { display:flex; flex-direction:column; min-width:0; width:100%; }
+  .lesson-buttons a, .lesson-buttons button {
+    display:flex; box-sizing:border-box; width:100%; max-width:100%;
+    min-width:0; white-space:normal; overflow-wrap:anywhere;
+    text-align:center; justify-content:center;
+  }
+}
