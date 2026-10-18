@@ -354,24 +354,37 @@
             }
             .hero { padding:12px 0 18px !important; }
         }
+
+        /* One clear brand image with subtle navigation immediately below */
+        .hero .hero-content { width:100% !important; max-width:1100px !important; margin:0 auto !important; }
+        .hero .hero-nav {
+            display:flex !important; flex-wrap:wrap !important; justify-content:center !important;
+            align-items:center !important; gap:10px 30px !important;
+            width:100% !important; margin:8px auto 0 !important; padding:8px 16px 14px !important;
+        }
+        .hero .hero-nav a {
+            display:inline-block !important; text-align:center !important; width:auto !important;
+            padding:9px 2px !important; margin:0 !important; border:0 !important;
+            background:transparent !important; border-radius:0 !important;
+            color:#332e2b !important; font-size:clamp(.94rem,1.35vw,1.04rem) !important;
+            font-weight:500 !important; text-decoration:none !important;
+            white-space:normal !important; line-height:1.35 !important;
+        }
+        .hero .hero-nav a:hover, .hero .hero-nav a:focus-visible {
+            color:#896e3d !important; text-decoration:underline !important; text-underline-offset:5px !important;
+        }
+        @media(max-width:650px) {
+            .hero .hero-nav {
+                display:flex !important; flex-wrap:wrap !important; flex-direction:row !important;
+                gap:6px 19px !important; margin-top:0 !important; padding:4px 12px 12px !important;
+            }
+            .hero .hero-nav a { flex:0 0 auto !important; font-size:.94rem !important; padding:8px 0 !important; }
+        }
     </style>
 </head>
 
 <body>
-    <header class="site-header">
-        <div class="logo-area">
-            <h1>The Gathering Place</h1>
-            <p>There’s Room at the Table • Come Be Filled</p>
-        </div>
 
-        <nav class="main-nav" aria-label="Main navigation">
-            <a href="#home">Home</a>
-            <a href="community.html">Gather &amp; Share</a>
-            <a href="#bible-study">Bible Study</a>
-            <a href="#community">Events &amp; Resources</a>
-            <a href="#prayer">Prayer</a>
-        </nav>
-    </header>
 
     <main>
         <!-- HERO -->
@@ -384,6 +397,13 @@
 
 
 
+        <nav class="main-nav hero-nav" aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="community.html">Gather &amp; Share</a>
+            <a href="#bible-study">Bible Study</a>
+            <a href="#community">Events &amp; Resources</a>
+            <a href="#prayer">Prayer</a>
+        </nav>
             </div>
         </section>
 
