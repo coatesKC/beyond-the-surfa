@@ -550,6 +550,23 @@
             .hero .hero-nav a {transition:none !important;}
             .hero .hero-nav a:hover {transform:none !important;}
         }
+
+        /* Make original logo the unmistakable hero focal point */
+        .hero .hero-content {max-width:1200px !important;}
+        .hero .gathering-place-logo {
+            width:min(1120px,98vw) !important;
+            max-height:none !important;
+            height:auto !important;
+            margin:0 auto 4px !important;
+        }
+        .hero {padding-top:8px !important;}
+        @media(max-width:650px) {
+            .hero .gathering-place-logo {
+                width:100vw !important;max-height:none !important;
+                margin:0 auto 2px !important;
+            }
+            .hero {padding-top:0 !important;}
+        }
     </style>
 </head>
 
