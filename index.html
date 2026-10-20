@@ -695,6 +695,9 @@
 
 /* Tight mobile event previews: override older event card styles */
 @media(max-width:650px){.visual-events-grid .compact-event{height:auto!important;min-height:0!important;padding:0!important;margin:0!important}.visual-events-grid .compact-event .compact-event-banner{padding:15px 12px!important;min-height:0!important}.visual-events-grid .compact-event .compact-event-banner h3{font-size:1.5rem!important;line-height:1.15!important;margin:4px 0!important}.visual-events-grid .compact-event .compact-event-banner p{font-size:.95rem!important;line-height:1.3!important;margin:3px 0!important}.visual-events-grid .compact-event .event-eyebrow{font-size:.7rem!important}.visual-events-grid .compact-event .visual-event-info{padding:10px 14px!important}.visual-events-grid .compact-event .visual-event-info>p{font-size:.88rem!important;line-height:1.35!important;margin:2px 0!important}.visual-events-grid .compact-event details{margin-top:4px!important}.visual-events-grid .compact-event summary{font-size:.86rem!important;padding:5px 0!important}.visual-events-grid .compact-event details:not([open])> :not(summary){display:none!important}}
+
+/* Keep workshop video from expanding the entire events section */
+.visual-events-grid .compact-workshop-info details:not([open]) video{display:none!important}.visual-events-grid .compact-workshop-info details[open] video{display:block!important;width:100%!important;max-height:240px!important;aspect-ratio:16/9!important;object-fit:contain!important;background:#222!important}.visual-events-grid .compact-workshop-info details summary{display:list-item;cursor:pointer}.visual-events-grid .compact-workshop-info details{margin:4px 0!important}.visual-events-grid .compact-workshop-info{min-height:0!important}
 </style>
 </head>
 
