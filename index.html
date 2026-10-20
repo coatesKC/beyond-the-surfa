@@ -687,7 +687,12 @@
         }
         .gratitude-pulse-button:hover, .gratitude-pulse-button:focus-visible { animation-play-state: paused; }
         @media (prefers-reduced-motion: reduce) { .gratitude-pulse-button { animation: none; } }
-    </style>
+    
+/* Compact mobile-first sections, styled to match Gather & Share */
+@media(max-width:650px){
+.podcast-section{padding:26px 16px!important}.podcast-section .section-heading{margin-bottom:12px!important}.podcast-section .section-heading h2{font-size:clamp(1.65rem,7vw,2.2rem)!important;line-height:1.12!important;margin:8px auto!important}.podcast-section .section-heading p{line-height:1.4!important;margin:8px auto!important}.podcast-section .podcast-container{margin-top:12px!important}.podcast-section .current-lesson-card{padding:16px!important}.community-section .section-heading{padding-bottom:12px!important}.visual-events-grid{gap:16px!important}.visual-event-card{overflow:hidden}.visual-event-card .visual-event-info{padding:14px 16px!important}.visual-event-card .visual-event-info p{line-height:1.45!important;margin:6px 0!important}.compact-event-banner{padding:22px 14px!important}.compact-event-banner h3{font-size:2rem!important;margin:6px 0!important}.visual-event-card img[src="covered-in-his-word-flyer.svg"]{max-height:330px!important;object-fit:contain!important;background:#f4f0e8}.visual-event-card details{margin-top:8px}}
+.compact-event{background:#fff9f8;border:1px solid #e1c6cb;border-radius:14px}.compact-event-banner{text-align:center;padding:28px 18px;background:linear-gradient(135deg,#f8e3e7,#fff6ef);color:#641f41}.compact-event-banner h3{font-family:Georgia,serif;font-size:2.2rem;margin:8px 0}.compact-event-banner p{font-style:italic;color:#8e6b2c;margin:0}.event-eyebrow{font-size:.8rem;font-weight:700;letter-spacing:.14em}.visual-event-card summary{cursor:pointer;color:#355741;font-weight:700;padding:8px 0}.visual-event-card details p{font-size:.92rem}.compact-workshop-info{padding:12px 16px!important;text-align:center}.compact-workshop-info p{margin:4px 0!important}
+</style>
 </head>
 
 <body>
@@ -769,14 +774,14 @@
         </section>
 
         <!-- PODCAST -->
-        <section class="podcast-section" id="podcast" style="padding:64px 20px;background:#f5f1e9;">
+        <section class="podcast-section" id="podcast" style="padding:30px 16px;background:#f5f1e9;">
             <div class="section-heading">
                 <p class="section-small">CONVERSATIONS THAT GO DEEPER</p>
-                <img src="https://ucudchsbuzfvbnntrdto.supabase.co/storage/v1/object/public/podcast-images/EC91975A-6626-4D15-AF3E-58161572CD53.png" alt="Beyond the Surface podcast logo, gold anatomical heart illustration" loading="lazy" style="display:block;width:min(360px,85vw);max-width:100%;height:auto;margin:0 auto 24px;border-radius:12px;">
+                <img src="https://ucudchsbuzfvbnntrdto.supabase.co/storage/v1/object/public/podcast-images/EC91975A-6626-4D15-AF3E-58161572CD53.png" alt="Beyond the Surface podcast logo, gold anatomical heart illustration" loading="lazy" style="display:block;width:min(190px,48vw);max-width:100%;height:auto;margin:0 auto 12px;border-radius:12px;">
                 <h2>Beyond the Surface — The Podcast</h2>
-                <p style="max-width:700px;margin:14px auto 0;line-height:1.8;">A space for honest conversations about faith, growth, everyday life, and walking with God beyond what people see on the surface.</p>
+                <p style="max-width:700px;margin:14px auto 0;line-height:1.8;">Honest conversations about faith, life, and growing with God.</p>
             </div>
-            <div class="podcast-container" style="display:grid;grid-template-columns:minmax(0,1fr);max-width:850px;margin:28px auto 0;">
+            <div class="podcast-container" style="display:grid;grid-template-columns:minmax(0,1fr);max-width:850px;margin:12px auto 0;">
                 <div class="current-lesson-card" style="text-align:center;max-width:100%;box-sizing:border-box;">
                     <p class="study-label">THE PODCAST</p>
                     <h3>Real Conversations. Deeper Faith.</h3>
@@ -820,32 +825,16 @@ document.querySelectorAll('.memory-video-frame').forEach(function(frame){var vid
             </div>
 
             <div class="visual-events-grid">
-<article class="visual-event-card" aria-label="Ladies' Night — Purpose, Prayer and Pretty Visions" style="border:1px solid #d9b7bb;border-radius:14px;overflow:hidden;background:#fff9f8">
-<div style="background:linear-gradient(130deg,#f9e5e8,#fff7f0);padding:26px 18px;text-align:center;color:#651e40">
-<p style="font-size:.78rem;letter-spacing:.17em;font-weight:700">YOU'RE INVITED</p>
-<h3 style="font-family:Georgia,serif;font-size:clamp(2rem,5vw,2.9rem);margin:8px 0">Ladies' Night</h3>
-<p style="font-family:Georgia,serif;font-style:italic;font-size:1.2rem;color:#976b22">Purpose, Prayer &amp; Pretty Visions</p>
-<p style="font-weight:700">Saturday, October 24, 2026<br>4:00 PM – 7:00 PM</p>
-</div>
-<div class="visual-event-info" style="padding:20px">
-<p class="event-category">FAITH • FRIENDSHIP • PURPOSE</p>
-<h3>Becoming the Woman God Called Me to Be</h3>
-<p>Join an evening of faith, friendship, vision board creation, prayer, encouraging messages, and refreshments.</p>
-<p><strong>Hosted by:</strong> Dollie Robinson<br><strong>Location:</strong> 904 Kiowa<br><strong>RSVP requested by:</strong> October 18</p>
-<p style="font-size:.9rem">“Write the vision, and make it plain.” — Habakkuk 2:2</p>
-</div></article>
+<article class="visual-event-card compact-event" aria-label="Ladies' Night — Purpose, Prayer and Pretty Visions">
+<div class="compact-event-banner ladies-banner"><span class="event-eyebrow">OCT 24 · 4–7 PM</span><h3>Ladies' Night</h3><p>Purpose, Prayer &amp; Pretty Visions</p></div>
+<div class="visual-event-info"><p>Vision boards, prayer &amp; sisterhood · Hosted by Dollie Robinson</p>
+<details><summary>Event details</summary><p><strong>Saturday, October 24, 2026 · 4–7 PM</strong><br>904 Kiowa<br>RSVP requested by October 18</p><p>Becoming the Woman God Called Me to Be. An evening of faith, friendship, encouraging messages, vision board creation and refreshments.</p><p>Habakkuk 2:2</p></details></div></article>
 
 <article class="visual-event-card" aria-label="Covered in His Word workshop">
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLScaMwcCF3L-vd29dAK0MKeg4eh-4sZzaNp0_mdaG9UVxgz_jA/viewform" target="_blank" rel="noopener noreferrer" aria-label="Register for Covered in His Word workshop" style="display:block;line-height:0;">
                         <img src="covered-in-his-word-flyer.svg" loading="lazy" alt="Covered in His Word, Bible Cover Workshop and Fellowship, November 21, 2026 at 10 AM. Location to be announced. Register for free." style="width:100%;height:auto;display:block;">
                     </a>
-                    <div class="visual-event-info" style="text-align:center;padding:20px;">
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScaMwcCF3L-vd29dAK0MKeg4eh-4sZzaNp0_mdaG9UVxgz_jA/viewform" target="_blank" rel="noopener noreferrer" class="primary-button" style="display:inline-block;max-width:100%;box-sizing:border-box;margin:0 auto 20px;">Register for Free</a>
-                        <video controls playsinline preload="metadata" style="display:block;width:100%;max-width:100%;border-radius:12px;background:#242424;" aria-label="Covered in His Word workshop video">
-                            <source src="https://ucudchsbuzfvbnntrdto.supabase.co/storage/v1/object/public/approved-event-videos/Covered_in_His_Word.MP4.mp4" type="video/mp4">
-                            Your browser does not support video playback.
-                        </video>
-                    </div>
+                    <div class="visual-event-info compact-workshop-info"><p>November 21 · 10 AM · Free Bible cover workshop</p><details><summary>Watch workshop video</summary><video controls playsinline preload="metadata" style="display:block;width:100%;border-radius:10px;background:#242424;margin-top:12px" aria-label="Covered in His Word workshop video"><source src="https://ucudchsbuzfvbnntrdto.supabase.co/storage/v1/object/public/approved-event-videos/Covered_in_His_Word.MP4.mp4" type="video/mp4">Your browser does not support video playback.</video></details></div>
                 </article>
 
 
