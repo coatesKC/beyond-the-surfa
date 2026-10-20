@@ -763,6 +763,25 @@
         </section>
 
         <!-- COMMUNITY -->
+        <!-- BOTTOM MOVING PHOTO BANNER -->
+        <section class="memories-section">
+            <div class="section-heading">
+                <p class="section-small">MOMENTS WE'VE SHARED</p>
+                <h2>Life Beyond the Surface</h2>
+                <p>Faith • Friendship • Service • Sisterhood</p>
+            </div>
+
+<div class="memory-gallery" id="event-reels"><h3>Our Moments</h3><div class="memory-video-grid"><article class="memory-video-card"><div class="memory-video-frame"><video preload="metadata" playsinline controlslist="nodownload" aria-label="Bibleton in the Garden event recap"><source src="https://ucudchsbuzfvbnntrdto.supabase.co/storage/v1/object/public/approved-event-videos/Bibleton_in_the_Garden_web.mp4#t=0.3" type="video/mp4">Your browser does not support video playback.</video><button type="button" class="memory-video-cover" aria-label="Play Bibleton in the Garden video"><span class="memory-video-play" aria-hidden="true">▶</span><span class="memory-video-caption">Bibleton in the Garden</span></button></div></article>
+<article class="memory-video-card"><div class="memory-video-frame"><video preload="metadata" playsinline controlslist="nodownload" aria-label="Heart & Stroke Walk event recap"><source src="https://ucudchsbuzfvbnntrdto.supabase.co/storage/v1/object/public/approved-event-videos/Heart_Walk_ready.mp4.mp4#t=0.3" type="video/mp4">Your browser does not support video playback.</video><button type="button" class="memory-video-cover" aria-label="Play Heart & Stroke Walk video"><span class="memory-video-play" aria-hidden="true">▶</span><span class="memory-video-caption">Heart &amp; Stroke Walk</span></button></div></article>
+<article class="memory-video-card"><div class="memory-video-frame"><video preload="metadata" playsinline controlslist="nodownload" aria-label="Women’s Water Retreat event recap"><source src="https://ucudchsbuzfvbnntrdto.supabase.co/storage/v1/object/public/approved-event-videos/Water_Retreat.mp4.mp4#t=0.3" type="video/mp4">Your browser does not support video playback.</video><button type="button" class="memory-video-cover" aria-label="Play Women’s Water Retreat video"><span class="memory-video-play" aria-hidden="true">▶</span><span class="memory-video-caption">Women’s Water Retreat</span></button></div></article></div></div>
+<style>
+.memory-gallery{max-width:1100px;margin:28px auto 10px;padding:0 14px}.memory-gallery h3{text-align:center;font:normal clamp(1.7rem,4vw,2.4rem) Georgia,serif;color:#304838;margin:0 0 23px}.memory-video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.memory-video-card{min-width:0}.memory-video-frame{position:relative;aspect-ratio:9/16;background:#23392c;border-radius:16px;overflow:hidden;box-shadow:0 5px 20px #0002}.memory-video-frame video{width:100%;height:100%;object-fit:cover;display:block}.memory-video-cover{position:absolute;inset:0;z-index:2;border:0;width:100%;height:100%;padding:0;cursor:pointer;background:linear-gradient(180deg,#0000 45%,#000b 100%);color:white;display:flex;align-items:center;justify-content:center}.memory-video-play{display:grid;place-items:center;width:66px;height:66px;border-radius:50%;background:#ffffffd9;color:#304b37;font-size:24px;padding-left:4px;box-shadow:0 3px 16px #0005}.memory-video-caption{position:absolute;bottom:18px;left:12px;right:12px;text-align:center;font-size:clamp(.85rem,2vw,1.08rem);font-weight:700;text-shadow:0 2px 5px #000}.memory-video-cover:focus-visible{outline:4px solid #bb9c61;outline-offset:-4px}.memory-video-frame.is-playing .memory-video-cover{display:none}@media(max-width:620px){.memory-video-grid{gap:8px}.memory-video-frame{border-radius:10px}.memory-video-play{width:42px;height:42px;font-size:17px}.memory-video-caption{font-size:12px;bottom:9px;left:5px;right:5px}}
+</style>
+<script>
+document.querySelectorAll('.memory-video-frame').forEach(function(frame){var video=frame.querySelector('video');var cover=frame.querySelector('.memory-video-cover');cover.addEventListener('click',function(){document.querySelectorAll('.memory-video-frame video').forEach(function(other){if(other!==video)other.pause()});frame.classList.add('is-playing');video.controls=true;var promise=video.play();if(promise&&promise.catch)promise.catch(function(){video.controls=true})});video.addEventListener('ended',function(){frame.classList.remove('is-playing');video.controls=false});video.addEventListener('pause',function(){if(video.ended)return});video.controls=false});
+</script>
+        </section>
+
         <section class="community-section" id="community">
             <div class="section-heading">
                 <p class="section-small">GET OUT • CONNECT • GIVE BACK</p>
@@ -905,24 +924,7 @@
             </div>
         </section>
 
-        <!-- BOTTOM MOVING PHOTO BANNER -->
-        <section class="memories-section">
-            <div class="section-heading">
-                <p class="section-small">MOMENTS WE'VE SHARED</p>
-                <h2>Life Beyond the Surface</h2>
-                <p>Faith • Friendship • Service • Sisterhood</p>
-            </div>
 
-<div class="memory-gallery" id="event-reels"><h3>Our Moments</h3><div class="memory-video-grid"><article class="memory-video-card"><div class="memory-video-frame"><video preload="metadata" playsinline controlslist="nodownload" aria-label="Bibleton in the Garden event recap"><source src="https://ucudchsbuzfvbnntrdto.supabase.co/storage/v1/object/public/approved-event-videos/Bibleton_in_the_Garden_web.mp4#t=0.3" type="video/mp4">Your browser does not support video playback.</video><button type="button" class="memory-video-cover" aria-label="Play Bibleton in the Garden video"><span class="memory-video-play" aria-hidden="true">▶</span><span class="memory-video-caption">Bibleton in the Garden</span></button></div></article>
-<article class="memory-video-card"><div class="memory-video-frame"><video preload="metadata" playsinline controlslist="nodownload" aria-label="Heart & Stroke Walk event recap"><source src="https://ucudchsbuzfvbnntrdto.supabase.co/storage/v1/object/public/approved-event-videos/Heart_Walk_ready.mp4.mp4#t=0.3" type="video/mp4">Your browser does not support video playback.</video><button type="button" class="memory-video-cover" aria-label="Play Heart & Stroke Walk video"><span class="memory-video-play" aria-hidden="true">▶</span><span class="memory-video-caption">Heart &amp; Stroke Walk</span></button></div></article>
-<article class="memory-video-card"><div class="memory-video-frame"><video preload="metadata" playsinline controlslist="nodownload" aria-label="Women’s Water Retreat event recap"><source src="https://ucudchsbuzfvbnntrdto.supabase.co/storage/v1/object/public/approved-event-videos/Water_Retreat.mp4.mp4#t=0.3" type="video/mp4">Your browser does not support video playback.</video><button type="button" class="memory-video-cover" aria-label="Play Women’s Water Retreat video"><span class="memory-video-play" aria-hidden="true">▶</span><span class="memory-video-caption">Women’s Water Retreat</span></button></div></article></div></div>
-<style>
-.memory-gallery{max-width:1100px;margin:28px auto 10px;padding:0 14px}.memory-gallery h3{text-align:center;font:normal clamp(1.7rem,4vw,2.4rem) Georgia,serif;color:#304838;margin:0 0 23px}.memory-video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.memory-video-card{min-width:0}.memory-video-frame{position:relative;aspect-ratio:9/16;background:#23392c;border-radius:16px;overflow:hidden;box-shadow:0 5px 20px #0002}.memory-video-frame video{width:100%;height:100%;object-fit:cover;display:block}.memory-video-cover{position:absolute;inset:0;z-index:2;border:0;width:100%;height:100%;padding:0;cursor:pointer;background:linear-gradient(180deg,#0000 45%,#000b 100%);color:white;display:flex;align-items:center;justify-content:center}.memory-video-play{display:grid;place-items:center;width:66px;height:66px;border-radius:50%;background:#ffffffd9;color:#304b37;font-size:24px;padding-left:4px;box-shadow:0 3px 16px #0005}.memory-video-caption{position:absolute;bottom:18px;left:12px;right:12px;text-align:center;font-size:clamp(.85rem,2vw,1.08rem);font-weight:700;text-shadow:0 2px 5px #000}.memory-video-cover:focus-visible{outline:4px solid #bb9c61;outline-offset:-4px}.memory-video-frame.is-playing .memory-video-cover{display:none}@media(max-width:620px){.memory-video-grid{gap:8px}.memory-video-frame{border-radius:10px}.memory-video-play{width:42px;height:42px;font-size:17px}.memory-video-caption{font-size:12px;bottom:9px;left:5px;right:5px}}
-</style>
-<script>
-document.querySelectorAll('.memory-video-frame').forEach(function(frame){var video=frame.querySelector('video');var cover=frame.querySelector('.memory-video-cover');cover.addEventListener('click',function(){document.querySelectorAll('.memory-video-frame video').forEach(function(other){if(other!==video)other.pause()});frame.classList.add('is-playing');video.controls=true;var promise=video.play();if(promise&&promise.catch)promise.catch(function(){video.controls=true})});video.addEventListener('ended',function(){frame.classList.remove('is-playing');video.controls=false});video.addEventListener('pause',function(){if(video.ended)return});video.controls=false});
-</script>
-        </section>
     </main>
 
     <footer class="site-footer">
