@@ -661,11 +661,32 @@
             }
         }
 
-        /* Gentle invitation to share gratitude */
-        .gratitude-pulse-button { display:inline-block; animation: gratitude-pulse 2.4s ease-in-out infinite; transform-origin:center; box-shadow:0 0 0 0 rgba(182,151,91,.36); }
-        @keyframes gratitude-pulse { 0%,100% { transform:scale(1);box-shadow:0 0 0 0 rgba(182,151,91,.36) } 50% { transform:scale(1.055);box-shadow:0 0 0 12px rgba(182,151,91,0) } }
-        .gratitude-pulse-button:hover,.gratitude-pulse-button:focus-visible { animation-play-state:paused; }
-        @media (prefers-reduced-motion:reduce) { .gratitude-pulse-button { animation:none; } }
+        /* Prominent, double-beat gratitude invitation */
+        .gratitude-pulse-button {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            min-height: 84px;
+            width: min(90vw, 490px);
+            padding: 22px 30px !important;
+            font-size: clamp(1.3rem, 4.8vw, 2rem) !important;
+            font-weight: 800 !important;
+            line-height: 1.2;
+            text-align: center;
+            border-radius: 18px !important;
+            transform-origin: center;
+            animation: gratitude-heartbeat 1.7s ease-in-out infinite;
+            box-shadow: 0 6px 24px rgba(121, 87, 33, .28);
+        }
+        @keyframes gratitude-heartbeat {
+            0%, 100% { transform: scale(1); box-shadow: 0 6px 24px rgba(121,87,33,.28); }
+            14% { transform: scale(1.13); box-shadow: 0 10px 32px rgba(182,151,91,.48); }
+            28% { transform: scale(1.02); }
+            42% { transform: scale(1.10); box-shadow: 0 10px 30px rgba(182,151,91,.4); }
+            60% { transform: scale(1); box-shadow: 0 6px 24px rgba(121,87,33,.28); }
+        }
+        .gratitude-pulse-button:hover, .gratitude-pulse-button:focus-visible { animation-play-state: paused; }
+        @media (prefers-reduced-motion: reduce) { .gratitude-pulse-button { animation: none; } }
     </style>
 </head>
 
