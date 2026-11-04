@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1160" role="img" aria-labelledby="title desc">
-<title id="title">Covered in His Word — A Bible Cover Workshop and Fellowship</title>
-<desc id="desc">The Gathering Place workshop. Saturday November 21, 2026 at 10:00 AM. Location to be announced.</desc>
+<title id="title">Match Your Word — Bible Cover and Study Notebook Workshop and Fellowship</title>
+<desc id="desc">The Gathering Place workshop. Saturday November 21, 2026, 3–6 PM. Location to be announced. Registration and design deadline: November 14, or when all 15 spaces are filled.</desc>
 <defs>
  <linearGradient id="paper" x2="0" y2="1"><stop stop-color="#faf7f1"/><stop offset="1" stop-color="#e9e1d3"/></linearGradient>
  <linearGradient id="green" x2="0" y2="1"><stop stop-color="#435641"/><stop offset="1" stop-color="#273a2b"/></linearGradient>
@@ -19,10 +19,10 @@
 <text x="450" y="142" fill="#8d7041" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="22" letter-spacing="8">THE GATHERING PLACE</text>
 <path d="M310 187 L590 187 M335 187 L335 230 M565 187 L565 230 M350 230 L550 230" fill="none" stroke="#8e774d" stroke-width="3"/>
 <text x="450" y="270" fill="#806a48" text-anchor="middle" font-family="Georgia,serif" font-size="24" font-style="italic">There's Room at the Table</text>
-<text x="450" y="414" text-anchor="middle" font-family="Georgia,serif" font-style="italic" fill="#41533e" font-size="91">Covered in</text>
-<text x="450" y="521" text-anchor="middle" font-family="Georgia,serif" fill="#302c22" font-size="103" font-weight="600">HIS WORD</text>
+<text x="450" y="414" text-anchor="middle" font-family="Georgia,serif" font-style="italic" fill="#41533e" font-size="77">Match Your</text>
+<text x="450" y="521" text-anchor="middle" font-family="Georgia,serif" fill="#302c22" font-size="103" font-weight="600">WORD</text>
 <path d="M230 558 Q450 574 670 558" stroke="#b08e52" stroke-width="4" fill="none"/>
-<text x="450" y="637" text-anchor="middle" fill="#534833" font-family="Arial,sans-serif" font-size="25" letter-spacing="5">A BIBLE COVER WORKSHOP</text>
+<text x="450" y="637" text-anchor="middle" fill="#534833" font-family="Arial,sans-serif" font-size="22" letter-spacing="2">BIBLE COVER &amp; STUDY NOTEBOOK WORKSHOP</text>
 <text x="450" y="680" text-anchor="middle" fill="#534833" font-family="Arial,sans-serif" font-size="25" letter-spacing="5">&amp; FELLOWSHIP</text>
 <g transform="translate(145 735)">
  <rect width="610" height="224" rx="15" fill="#fffaf2" stroke="#d0b98c" stroke-width="2"/>
@@ -31,12 +31,13 @@
  <text x="101" y="117" text-anchor="middle" fill="#302c22" font-family="Georgia,serif" font-size="35">NOV 21</text>
  <text x="101" y="151" text-anchor="middle" fill="#766650" font-family="Georgia,serif" font-size="24">2026</text>
  <text x="305" y="67" text-anchor="middle" fill="#927545" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">TIME</text>
- <text x="305" y="127" text-anchor="middle" fill="#302c22" font-family="Georgia,serif" font-size="35">10:00</text>
- <text x="305" y="160" text-anchor="middle" fill="#766650" font-family="Georgia,serif" font-size="24">AM</text>
+ <text x="305" y="127" text-anchor="middle" fill="#302c22" font-family="Georgia,serif" font-size="35">3–6</text>
+ <text x="305" y="160" text-anchor="middle" fill="#766650" font-family="Georgia,serif" font-size="24">PM</text>
  <text x="508" y="67" text-anchor="middle" fill="#927545" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2">LOCATION</text>
  <text x="508" y="119" text-anchor="middle" fill="#302c22" font-family="Georgia,serif" font-size="30">TO BE</text>
  <text x="508" y="151" text-anchor="middle" fill="#302c22" font-family="Georgia,serif" font-size="27">ANNOUNCED</text>
 </g>
+<text x="450" y="990" text-anchor="middle" fill="#534833" font-family="Arial,sans-serif" font-size="20">Registration &amp; design deadline: November 14, or when full (15 spaces)</text>
 <rect x="227" y="1011" width="446" height="66" rx="33" fill="url(#green)"/>
 <text x="450" y="1053" text-anchor="middle" fill="#fffdf8" font-family="Arial,sans-serif" font-size="23" letter-spacing="3">REGISTER FOR FREE ↓</text>
 </svg>
